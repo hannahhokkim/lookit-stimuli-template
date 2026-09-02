@@ -134,7 +134,9 @@ function scheduleDecoratingUnlock(audio, lockToken) {
 function getConditionScript(scene) {
   if (CONDITION === "prior") {
     return [
-      "Here is a drawing for you to decorate. Look, it is a " + scene.scene_label + ".",
+      "<span style='font-size:24px;font-weight:bold;color:#0f172a;'>Here is your next drawing!</span>",
+      "<br>",
+      "Look, it is a " + scene.scene_label + ".",
       "<br><br>",
       "A bunch of kids played this game last week and decorated it.",
       "There were, like, 20 kids who played this game last week.",
@@ -142,7 +144,7 @@ function getConditionScript(scene) {
       "After these 20 kids played our game, we had to put up this sign so everyone knows this rule.",
       "Do you want to know what the sign says?",
       "<br><br>",
-      "The sign says: <strong>" + scene.rule_text + "</strong>",
+      "<span style='font-size:25px;font-weight:bold;color:#b91c1c;'>The sign says: " + scene.rule_text + "</span>",
       "<br><br>",
       "Okay, now you can decorate the picture. Use any stickers you want, but remember the sign:",
       "<strong>" + scene.rule_text + "</strong>",
@@ -151,7 +153,9 @@ function getConditionScript(scene) {
   }
 
   return [
-    "Here is a drawing for you to decorate. Look, it is a " + scene.scene_label + ".",
+    "<span style='font-size:24px;font-weight:bold;color:#0f172a;'>Here is your next drawing!</span>",
+    "<br>",
+    "Look, it is a " + scene.scene_label + ".",
     "<br><br>",
     "You are the first kid who has ever played this game.",
     "Nobody has played this game before you.",
@@ -159,7 +163,7 @@ function getConditionScript(scene) {
     "Before anyone plays a new game, we put up the sign so everyone knows this rule.",
     "Do you want to know what the sign says?",
     "<br><br>",
-    "The sign says: <strong>" + scene.rule_text + "</strong>",
+    "<span style='font-size:25px;font-weight:bold;color:#b91c1c;'>The sign says: " + scene.rule_text + "</span>",
     "<br><br>",
     "Okay, now you can decorate the picture. Use any stickers you want, but remember the sign:",
     "<strong>" + scene.rule_text + "</strong>",
@@ -171,6 +175,20 @@ function makeTextPageHTML(text) {
   return [
     "<div style='width:min(900px,94vw);margin:0 auto;font-family:Arial,sans-serif;font-size:24px;line-height:1.35;'>",
     text,
+    "</div>"
+  ].join("");
+}
+
+function makeIntroPageHTML() {
+  return [
+    "<div style='width:min(900px,94vw);margin:0 auto;font-family:Arial,sans-serif;text-align:center;'>",
+    "<div style='font-size:54px;margin-bottom:8px;'>🎨 ✨ 🖼️</div>",
+    "<h1 style='font-size:38px;line-height:1.15;margin:0 0 14px;color:#0f172a;'>Welcome to the decorating game!</h1>",
+    "<div style='font-size:25px;line-height:1.38;background:#fff7ed;border:3px solid #fbbf24;border-radius:18px;padding:18px 22px;text-align:left;'>",
+    "<p style='margin:0 0 12px;'>Today you will see some pictures.</p>",
+    "<p style='margin:0 0 12px;'>You can decorate the pictures with stickers.</p>",
+    "<p style='margin:0;'>First, we will practice together.</p>",
+    "</div>",
     "</div>"
   ].join("");
 }
@@ -210,9 +228,9 @@ function makeTrialHTML(prompt, imageUrl, options) {
   return [
     "<style>@keyframes pulseSticker { 0%, 100% { transform:scale(1); box-shadow:0 0 0 0 rgba(37,99,235,0); } 50% { transform:scale(1.12); box-shadow:0 0 0 8px rgba(37,99,235,.25); } }</style>",
     "<div style='width:min(1120px,96vw);margin:0 auto;font-family:Arial,sans-serif;'>",
-    "<p style='font-size:21px;margin:0 0 10px;line-height:1.25;'>",
+    "<div style='font-size:21px;margin:0 0 10px;line-height:1.25;background:#f8fafc;border:2px solid #cbd5e1;border-radius:12px;padding:10px 14px;color:#1f2937;'>",
     prompt,
-    "</p>",
+    "</div>",
     "<div style='display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:14px;align-items:start;'>",
     "<div id='decorating-stage' style='position:relative;width:100%;aspect-ratio:3 / 2;overflow:hidden;border:3px solid #1f2933;background:#f7fafc;touch-action:none;'>",
     scene,
@@ -262,14 +280,18 @@ function setupDemoAnimation() {
     if (nextButton) {
       nextButton.disabled = false;
       nextButton.style.display = "inline-block";
-      nextButton.style.fontSize = "24px";
-      nextButton.style.padding = "14px 24px";
-      nextButton.style.background = "#fde68a";
-      nextButton.style.border = "3px solid #92400e";
-      nextButton.style.borderRadius = "8px";
+      nextButton.style.fontSize = "32px";
+      nextButton.style.fontWeight = "bold";
+      nextButton.style.padding = "22px 38px";
+      nextButton.style.background = "#fbbf24";
+      nextButton.style.color = "#111827";
+      nextButton.style.border = "5px solid #ea580c";
+      nextButton.style.borderRadius = "18px";
       nextButton.style.cursor = "pointer";
+      nextButton.style.boxShadow = "0 8px 0 #c2410c, 0 12px 22px rgba(0,0,0,.20)";
+      nextButton.style.textTransform = "uppercase";
     }
-  }, 4700);
+  }, 10000);
 }
 
 function setupDecoratingTrial(options) {
@@ -459,13 +481,88 @@ function setupDecoratingTrial(options) {
 }
 
 function makeFinalPreviewHTML() {
+  var scene = window.finalScene;
+  var placements = window.finalPlacements || [];
+  var stickers = "";
+
+  for (var i = 0; i < placements.length; i++) {
+    var color = placements[i].sticker === "★" ? "color:#dc2626;" : "";
+    stickers += [
+      "<span style='position:absolute;left:",
+      placements[i].x * 100,
+      "%;top:",
+      placements[i].y * 100,
+      "%;transform:translate(-50%,-50%);font-size:42px;",
+      color,
+      "'>",
+      placements[i].sticker,
+      "</span>"
+    ].join("");
+  }
+
   return [
     "<div style='width:min(760px,90vw);margin:0 auto 18px;font-family:Arial,sans-serif;'>",
     "<div style='position:relative;width:100%;aspect-ratio:3 / 2;overflow:hidden;border:3px solid #1f2933;background:#f7fafc;pointer-events:none;'>",
-    window.finalStageHTML || "",
+    scene ? "<img src='" + scene.image + "' style='width:100%;height:100%;object-fit:cover;display:block;'>" : "",
+    stickers,
     "</div>",
     "</div>"
   ].join("");
+}
+
+function makePredictionChoicesHTML(scene) {
+  var buttons = "";
+  for (var i = 1; i <= 10; i++) {
+    buttons += [
+      "<button type='button' class='prediction-choice' data-number='",
+      i,
+      "' style='width:64px;height:64px;margin:6px;font-size:28px;font-weight:bold;border:3px solid #2563eb;border-radius:14px;background:#dbeafe;color:#1e3a8a;cursor:pointer;'>",
+      i,
+      "</button>"
+    ].join("");
+  }
+
+  return [
+    "<div style='width:min(900px,94vw);margin:0 auto;font-family:Arial,sans-serif;font-size:24px;line-height:1.35;text-align:center;'>",
+    "<p>I'm going to play this game with 10 more kids later.</p>",
+    "<p>Out of 10 kids who might play later, how many do you think will put ",
+    scene.rule_question_text,
+    " on the picture?</p>",
+    "<div style='margin-top:10px;'>",
+    buttons,
+    "</div>",
+    "</div>"
+  ].join("");
+}
+
+function setupPredictionChoices() {
+  var nextButton = document.getElementById("jspsych-html-button-response-button-0");
+  var buttons = document.querySelectorAll(".prediction-choice");
+
+  window.currentPredictionResponse = null;
+
+  if (nextButton) {
+    nextButton.disabled = true;
+    nextButton.style.opacity = "0.45";
+  }
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+      window.currentPredictionResponse = this.dataset.number;
+      for (var j = 0; j < buttons.length; j++) {
+        buttons[j].style.background = "#dbeafe";
+        buttons[j].style.borderColor = "#2563eb";
+        buttons[j].style.transform = "scale(1)";
+      }
+      this.style.background = "#fde68a";
+      this.style.borderColor = "#ea580c";
+      this.style.transform = "scale(1.08)";
+      if (nextButton) {
+        nextButton.disabled = false;
+        nextButton.style.opacity = "1";
+      }
+    });
+  }
 }
 
 function makeFinalQuestionTrial(questionType, buttonText) {
@@ -481,7 +578,10 @@ function makeFinalQuestionTrial(questionType, buttonText) {
         prediction: "I'm going to play this game with 10 more kids later.<br><br>Out of 10 kids who might play later, how many do you think will put " + scene.rule_question_text + " on the picture?"
       };
       window.pendingFinalVoice = voices[questionType];
-      return makeFinalPreviewHTML() + makeTextPageHTML("<p style='text-align:center;'>" + textByType[questionType] + "</p>");
+      if (questionType === "prediction") {
+        return makeFinalPreviewHTML() + makePredictionChoicesHTML(scene);
+      }
+      return makeFinalPreviewHTML() + makeTextPageHTML("<p style='text-align:center;font-size:28px;'>" + textByType[questionType] + "</p>");
     },
     choices: [buttonText || "Next"],
     data: function() {
@@ -494,8 +594,14 @@ function makeFinalQuestionTrial(questionType, buttonText) {
     },
     on_load: function() {
       playPageAudio(window.pendingFinalVoice);
+      if (questionType === "prediction") {
+        setupPredictionChoices();
+      }
     },
-    on_finish: function() {
+    on_finish: function(data) {
+      if (questionType === "prediction") {
+        data.prediction_response = window.currentPredictionResponse;
+      }
       stopCurrentAudio();
     }
   };
@@ -503,7 +609,7 @@ function makeFinalQuestionTrial(questionType, buttonText) {
 
 var introTrial = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: makeTextPageHTML("<p>Hi! Today we're going to play a decorating game.</p><p>You'll see a picture, and you can decorate it with stickers.</p><p>But before we start, we'll practice how to put stickers on the picture.</p>"),
+  stimulus: makeIntroPageHTML(),
   choices: ["Start practice"],
   data: { task_part: "intro", condition: CONDITION },
   on_load: function() { playPageAudio(AUDIO_BASE + "intro.mp3"); },
@@ -632,7 +738,7 @@ function makeSceneTrial(scene, isFinalScene) {
 
       if (isFinalScene) {
         window.finalScene = scene;
-        window.finalStageHTML = stage ? stage.innerHTML : "";
+        window.finalPlacements = JSON.parse(JSON.stringify(placements));
       }
 
       stopCurrentAudio();

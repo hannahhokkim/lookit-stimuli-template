@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decorating Game Task</title>
+    <link rel="stylesheet" href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css">
+    <style>
+      body {
+        background: #f7fbff;
+        margin: 0;
+      }
+
+      #start-screen {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .start-card {
+        max-width: 760px;
+      }
+
+      .start-card h1 {
+        color: #0f172a;
+        font-size: 46px;
+        line-height: 1.1;
+        margin: 0 0 16px;
+      }
+
+      .start-card p {
+        color: #475569;
+        font-size: 22px;
+        line-height: 1.45;
+        margin: 0 0 28px;
+      }
+
+      #start-task {
+        background: #fbbf24;
+        border: 5px solid #ea580c;
+        border-radius: 20px;
+        box-shadow: 0 8px 0 #c2410c, 0 12px 22px rgba(0, 0, 0, .2);
+        color: #111827;
+        cursor: pointer;
+        font-size: 34px;
+        font-weight: 800;
+        padding: 22px 42px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="start-screen">
+      <div class="start-card">
+        <div style="font-size:64px;margin-bottom:12px;" aria-hidden="true">🎨 ✨ 🖼️</div>
+        <h1>Ready to play?</h1>
+        <p>Click the button to start the decorating game with sound.</p>
+        <button id="start-task" type="button">Start the game</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0"></script>
+    <script>
+      document.getElementById("start-task").addEventListener("click", function() {
+        document.getElementById("start-screen").remove();
+        var script = document.createElement("script");
+        script.src = "chs_sign_task_audio.js";
+        document.body.appendChild(script);
+      });
+    </script>
+  </body>
+</html>

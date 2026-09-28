@@ -1,11 +1,9 @@
 var jsPsych = initJsPsych();
 
-var IMG_BASE = "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/img/";
-var AUDIO_BASE = "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/mp3/chs_sign_task/";
-
-var params = new URLSearchParams(window.location.search);
-var urlCondition = params.get("condition");
-var CONDITION = urlCondition || jsPsych.randomization.sampleWithoutReplacement(["prior", "first"], 1)[0];
+var IMG_BASE = "../img/";
+var AUDIO_BASE = "../mp3/chs_sign_task_break2/";
+var FALLBACK_AUDIO_BASE = "../mp3/chs_sign_task/";
+var CONDITION = "prior";
 
 var SCENES = [
   {
@@ -17,7 +15,6 @@ var SCENES = [
     rule_question_text: "cats on the desk",
     forbidden_stickers: ["🐱", "😺"],
     prior_voice: AUDIO_BASE + "prior_classroom_nocats.mp3",
-    first_voice: AUDIO_BASE + "first_classroom_nocats.mp3",
     final_voice_key: "cats"
   },
   {
@@ -29,7 +26,6 @@ var SCENES = [
     rule_question_text: "fish in the mountain",
     forbidden_stickers: ["🐠", "🐟"],
     prior_voice: AUDIO_BASE + "prior_mountain_nofish.mp3",
-    first_voice: AUDIO_BASE + "first_mountain_nofish.mp3",
     final_voice_key: "fish"
   },
   {
@@ -41,7 +37,6 @@ var SCENES = [
     rule_question_text: "hearts underwater",
     forbidden_stickers: ["💙", "❤️", "💛", "💚", "💜", "🧡", "🤍"],
     prior_voice: AUDIO_BASE + "prior_underwater_nohearts.mp3",
-    first_voice: AUDIO_BASE + "first_underwater_nohearts.mp3",
     final_voice_key: "hearts"
   }
 ];
@@ -66,19 +61,19 @@ var FINAL_VOICES = {
     made: AUDIO_BASE + "final_made_cats.mp3",
     did: AUDIO_BASE + "final_did_cats.mp3",
     why: AUDIO_BASE + "final_why_cats.mp3",
-    prediction: AUDIO_BASE + "final_prediction_cats.mp3"
+    prediction: FALLBACK_AUDIO_BASE + "final_prediction_cats.mp3"
   },
   fish: {
     made: AUDIO_BASE + "final_made_fish.mp3",
     did: AUDIO_BASE + "final_did_fish.mp3",
     why: AUDIO_BASE + "final_why_fish.mp3",
-    prediction: AUDIO_BASE + "final_prediction_fish.mp3"
+    prediction: FALLBACK_AUDIO_BASE + "final_prediction_fish.mp3"
   },
   hearts: {
     made: AUDIO_BASE + "final_made_hearts.mp3",
     did: AUDIO_BASE + "final_did_hearts.mp3",
     why: AUDIO_BASE + "final_why_hearts.mp3",
-    prediction: AUDIO_BASE + "final_prediction_hearts.mp3"
+    prediction: FALLBACK_AUDIO_BASE + "final_prediction_hearts.mp3"
   }
 };
 
@@ -134,7 +129,7 @@ function scheduleDecoratingUnlock(audio, lockToken) {
 function getConditionScript(scene) {
   if (CONDITION === "prior") {
     return [
-      "<span style='font-size:24px;font-weight:bold;color:#0f172a;'>Here is your next drawing!</span>",
+      "<span style='font-size:24px;font-weight:bold;color:#0f172a;'>Here is a drawing for you to decorate.</span>",
       "<br>",
       "Look, it is a " + scene.scene_label + ".",
       "<br><br>",
@@ -148,7 +143,8 @@ function getConditionScript(scene) {
       "<br><br>",
       "Okay, now you can decorate the picture. Use any stickers you want, but remember the sign:",
       "<strong>" + scene.rule_text + "</strong>",
-      "Have fun!"
+      "Have fun!",
+      "<span style='color:#674ea7;'>When you're done decorating, scroll down and click the button to go to the next page.</span>"
     ].join(" ");
   }
 
@@ -185,9 +181,11 @@ function makeIntroPageHTML() {
     "<div style='font-size:54px;margin-bottom:8px;'>🎨 ✨ 🖼️</div>",
     "<h1 style='font-size:38px;line-height:1.15;margin:0 0 14px;color:#0f172a;'>Welcome to the decorating game!</h1>",
     "<div style='font-size:25px;line-height:1.38;background:#fff7ed;border:3px solid #fbbf24;border-radius:18px;padding:18px 22px;text-align:left;'>",
-    "<p style='margin:0 0 12px;'>Today you will see some pictures.</p>",
-    "<p style='margin:0 0 12px;'>You can decorate the pictures with stickers.</p>",
-    "<p style='margin:0;'>First, we will practice together.</p>",
+    "<p style='margin:0 0 12px;'>Hi! Today we're going to play a decorating game.</p>",
+    "<p style='margin:0 0 12px;'>You'll see a picture, and you can decorate it with stickers.</p>",
+    "<p style='margin:0 0 12px;'>Before we start, we'll practice how to put stickers on the picture.</p>",
+    "<p style='margin:0 0 12px;color:#1155cc;'>In this game, you'll click buttons at the bottom of the page to get to the next part. If you don't see the button, scroll down and look for it.</p>",
+    "<p style='margin:0;color:#1155cc;'>You can draw for 10 minutes. After 10 minutes, the drawing will change, okay?</p>",
     "</div>",
     "</div>"
   ].join("");
@@ -307,6 +305,7 @@ function setupDecoratingTrial(options) {
   var decoratingUnlocked = !options.startLocked;
   var lockToken = Date.now() + "-" + Math.random();
   var lockedOverlay = null;
+  var practiceFeedback = null;
 
   window.currentDecorations = placements;
   window.currentSelectionEvents = selectionEvents;
@@ -315,6 +314,22 @@ function setupDecoratingTrial(options) {
   if (options.requirePracticeSuccess && nextButton) {
     nextButton.disabled = true;
     nextButton.style.opacity = "0.45";
+
+    practiceFeedback = document.createElement("div");
+    practiceFeedback.style.position = "absolute";
+    practiceFeedback.style.left = "50%";
+    practiceFeedback.style.top = "9%";
+    practiceFeedback.style.zIndex = "25";
+    practiceFeedback.style.transform = "translateX(-50%)";
+    practiceFeedback.style.padding = "10px 16px";
+    practiceFeedback.style.borderRadius = "12px";
+    practiceFeedback.style.background = "rgba(255,247,237,.96)";
+    practiceFeedback.style.border = "3px solid #ea580c";
+    practiceFeedback.style.fontSize = "22px";
+    practiceFeedback.style.fontWeight = "bold";
+    practiceFeedback.style.pointerEvents = "none";
+    practiceFeedback.style.display = "none";
+    stage.appendChild(practiceFeedback);
   }
 
   function getPos(event) {
@@ -347,6 +362,13 @@ function setupDecoratingTrial(options) {
     if (nextButton) {
       nextButton.disabled = false;
       nextButton.style.opacity = "1";
+      if (options.requirePracticeSuccess) nextButton.textContent = "Great job! Keep going";
+    }
+    if (practiceFeedback) {
+      practiceFeedback.textContent = "Great job! Scroll down and click the button when you're ready to keep going!";
+      practiceFeedback.style.display = "block";
+      practiceFeedback.style.color = "#166534";
+      practiceFeedback.style.borderColor = "#16a34a";
     }
     if (options.successAudio && !successPlayed) {
       successPlayed = true;
@@ -441,6 +463,12 @@ function setupDecoratingTrial(options) {
     stickerButtons[i].addEventListener("click", function() {
       if (!decoratingUnlocked) return;
       selectedSticker = this.dataset.sticker;
+      if (practiceFeedback && options.requiredPracticeSticker && selectedSticker !== options.requiredPracticeSticker) {
+        practiceFeedback.textContent = "Hmmm, what about the red star?";
+        practiceFeedback.style.display = "block";
+        practiceFeedback.style.color = "#9a3412";
+        practiceFeedback.style.borderColor = "#ea580c";
+      }
       selectionEvents.push({
         sticker: selectedSticker,
         time_ms: Math.round(performance.now()),
@@ -572,9 +600,9 @@ function makeFinalQuestionTrial(questionType, buttonText) {
       var scene = window.finalScene;
       var voices = FINAL_VOICES[scene.final_voice_key];
       var textByType = {
-        made: "Nice decorating. Can you tell me what you made?",
-        did: "Did you put any " + scene.rule_question_text + " on the picture?",
-        why: "Why did you or didn't you put " + scene.rule_question_text + "?",
+        made: "Nice decorating. Can you tell me what you made? <span style='color:#dc2626;'>Feel free to describe your work out loud!</span>",
+        did: "Did you put any " + scene.rule_question_text + " on the picture? <span style='color:#dc2626;'>Feel free to answer out loud!</span>",
+        why: "Why did you or didn't you put " + scene.rule_question_text + "? <span style='color:#dc2626;'>Feel free to say your reason out loud!</span>",
         prediction: "I'm going to play this game with 10 more kids later.<br><br>Out of 10 kids who might play later, how many do you think will put " + scene.rule_question_text + " on the picture?"
       };
       window.pendingFinalVoice = voices[questionType];
@@ -618,7 +646,7 @@ var introTrial = {
 
 var demoTrial = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: makeTrialHTML("Watch first. I'm going to click the blue heart, and then I'm going to put it in the blue box.<br><br>See? First click the sticker, then click where you want to put it.", null, {
+  stimulus: makeTrialHTML("Watch first. I'm going to click the blue heart, and then I'm going to put it in the blue box.<br><br>See? First click the sticker, then click where you want to put it. When you're ready to practice, click the button that tells you to try.", null, {
     isPractice: true,
     isDemo: true,
     stickerList: ["💙"],
@@ -647,7 +675,7 @@ var practiceBlueTrial = {
   choices: ["Next"],
   data: { task_part: "practice_blue", condition: CONDITION },
   on_load: function() {
-    playPageAudio(AUDIO_BASE + "practice_blue_heart.mp3");
+    playPageAudio(FALLBACK_AUDIO_BASE + "practice_blue_heart.mp3");
     setupDecoratingTrial({
       requirePracticeSuccess: true,
       requiredPracticeSticker: "💙",
@@ -673,7 +701,7 @@ var practiceRedTrial = {
   choices: ["Next"],
   data: { task_part: "practice_red", condition: CONDITION },
   on_load: function() {
-    playPageAudio(AUDIO_BASE + "practice_red_star.mp3");
+    playPageAudio(FALLBACK_AUDIO_BASE + "practice_red_star.mp3");
     setupDecoratingTrial({
       requirePracticeSuccess: true,
       requiredPracticeSticker: "★",
@@ -689,7 +717,7 @@ var practiceRedTrial = {
 
 var realGameIntroTrial = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: makeTextPageHTML("<p>Now we're going to play the real decorating game.</p><p>Remember, you can decorate the picture however you want.</p>"),
+  stimulus: makeTextPageHTML("<p>Now we're going to play the real decorating game.</p><p>Remember, you can decorate the picture however you want.</p><p style='color:#674ea7;'>Once you're done decorating, click the button to go to the next page.</p>"),
   choices: ["Start"],
   data: { task_part: "real_game_intro", condition: CONDITION },
   on_load: function() { playPageAudio(AUDIO_BASE + "real_game_intro.mp3"); },
@@ -719,8 +747,7 @@ function makeSceneTrial(scene, isFinalScene) {
         forbiddenStickers: scene.forbidden_stickers,
         startLocked: true
       });
-      var pageAudio = CONDITION === "prior" ? scene.prior_voice : scene.first_voice;
-      var audio = playPageAudio(pageAudio);
+      var audio = playPageAudio(scene.prior_voice);
       scheduleDecoratingUnlock(audio, lockToken);
     },
     on_finish: function(data) {

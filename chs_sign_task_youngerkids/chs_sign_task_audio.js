@@ -787,12 +787,12 @@ var shuffledScenes = jsPsych.randomization.shuffle(SCENES);
 var timeline = [introTrial, demoTrial, practiceBlueTrial, practiceRedTrial, realGameIntroTrial];
 
 for (var s = 0; s < shuffledScenes.length; s++) {
-  var scene = shuffledScenes[s];
-  timeline.push(makeSceneTrial(scene));
-  for (var q = 1; q <= 6; q++) {
-    var isLastQuestion = s === shuffledScenes.length - 1 && q === 6;
-    timeline.push(makeFollowupTrial(scene, q, isLastQuestion ? "Finish" : "Next"));
-  }
+  timeline.push(makeSceneTrial(shuffledScenes[s]));
+}
+
+var finalScene = shuffledScenes[shuffledScenes.length - 1];
+for (var q = 1; q <= 6; q++) {
+  timeline.push(makeFollowupTrial(finalScene, q, q === 6 ? "Finish" : "Next"));
 }
 
 jsPsych.run(timeline);

@@ -171,10 +171,10 @@ function getConditionScript(scene) {
     "The sign says: Welcome! Decorate this " + scene.scene_label + " with whatever you want.",
     "You can add whatever stickers you find.",
     "<br><br>",
-    "<span style='font-size:25px;font-weight:bold;color:#b91c1c;'>" + scene.rule_text + "</span>",
+    scene.rule_text,
     "<br><br>",
     "Okay, now you can decorate the picture like we practiced. Use any stickers you want, but remember the sign:",
-    "<strong>" + scene.rule_text + "</strong>",
+    scene.rule_text,
     "Have fun! When you're done decorating, scroll down and click the button to go to the next page."
   ].join(" ");
 }

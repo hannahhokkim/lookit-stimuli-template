@@ -723,6 +723,19 @@ var realGameIntroTrial = {
   on_finish: function() { stopCurrentAudio(); }
 };
 
+var allFinishedTrial = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: [
+    "<div style='width:min(760px,92vw);margin:0 auto;font-family:Arial,sans-serif;text-align:center;'>",
+    "<div style='font-size:72px;margin-bottom:14px;' aria-hidden='true'>🎉</div>",
+    "<h1 style='font-size:48px;line-height:1.15;margin:0;color:#0f172a;'>All finished!</h1>",
+    "</div>"
+  ].join(""),
+  choices: [],
+  trial_duration: 1000,
+  data: { task_part: "all_finished", condition: CONDITION }
+};
+
 function makeSceneTrial(scene, isFinalScene) {
   return {
     type: jsPsychHtmlButtonResponse,
@@ -784,5 +797,6 @@ timeline.push(makeFinalQuestionTrial("made", "Next"));
 timeline.push(makeFinalQuestionTrial("did", "Next"));
 timeline.push(makeFinalQuestionTrial("why", "Next"));
 timeline.push(makeFinalQuestionTrial("prediction", "Finish"));
+timeline.push(allFinishedTrial);
 
 jsPsych.run(timeline);

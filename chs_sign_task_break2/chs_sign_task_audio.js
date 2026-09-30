@@ -362,10 +362,9 @@ function setupDecoratingTrial(options) {
     if (nextButton) {
       nextButton.disabled = false;
       nextButton.style.opacity = "1";
-      if (options.requirePracticeSuccess) nextButton.textContent = "Great job! Keep going";
     }
     if (practiceFeedback) {
-      practiceFeedback.textContent = "Great job! Scroll down and click the button when you're ready to keep going!";
+      practiceFeedback.textContent = "Great job!";
       practiceFeedback.style.display = "block";
       practiceFeedback.style.color = "#166534";
       practiceFeedback.style.borderColor = "#16a34a";

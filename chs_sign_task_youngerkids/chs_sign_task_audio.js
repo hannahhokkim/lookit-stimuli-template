@@ -26,27 +26,23 @@ var SCENE_PAIRS = [
     A: {
       scene_id: "classroom_nocats",
       scene_label: "classroom",
-      image: IMG_BASE + "rbb4_rule_b_nocats.png",
+      image: IMG_BASE + "youngerkids_classroom_nocats.png",
       rule_target: "cat",
       rule_text: "No cats on the desk.",
       rule_question_text: "cats on the desk",
       alternative_question_text: "dogs on the chalkboard",
       forbidden_stickers: ["🐱", "😺"],
-      sign_box: { left: "72.9%", top: "66.2%", width: "21.9%", height: "14.7%" },
-      sign_scene_text: "Decorate this classroom with whatever you want! You can draw, use emojis, and pictures.",
       voices: makeVoices("1a")
     },
     B: {
       scene_id: "classroom_nodogs",
       scene_label: "classroom",
-      image: IMG_BASE + "rbb4_rule_b_nocats.png",
+      image: IMG_BASE + "youngerkids_classroom_nodogs.png",
       rule_target: "dog",
       rule_text: "No dogs on the chalkboard.",
       rule_question_text: "dogs on the chalkboard",
       alternative_question_text: "cats on the desk",
       forbidden_stickers: ["🐶"],
-      sign_box: { left: "72.9%", top: "66.2%", width: "21.9%", height: "14.7%" },
-      sign_scene_text: "Decorate this classroom with whatever you want! You can draw, use emojis, and pictures.",
       voices: makeVoices("1b")
     }
   },
@@ -54,27 +50,23 @@ var SCENE_PAIRS = [
     A: {
       scene_id: "park_nofish",
       scene_label: "park",
-      image: IMG_BASE + "rbb4_rule_b_nofish.png",
+      image: IMG_BASE + "youngerkids_park_nofish.png",
       rule_target: "fish",
       rule_text: "No fish on the mountain.",
       rule_question_text: "fish on the mountain",
       alternative_question_text: "poop in the lake",
       forbidden_stickers: ["🐠", "🐟"],
-      sign_box: { left: "72.9%", top: "67.0%", width: "21.7%", height: "19.5%" },
-      sign_scene_text: "Decorate this park with whatever you want! You can draw, use emojis, add pictures, and anything else!",
       voices: makeVoices("2a")
     },
     B: {
       scene_id: "park_nopoop",
       scene_label: "park",
-      image: IMG_BASE + "rbb4_rule_b_nofish.png",
+      image: IMG_BASE + "youngerkids_park_nopoop.png",
       rule_target: "poop",
       rule_text: "No poop in the lake.",
       rule_question_text: "poop in the lake",
       alternative_question_text: "fish on the mountain",
       forbidden_stickers: ["💩"],
-      sign_box: { left: "72.9%", top: "67.0%", width: "21.7%", height: "19.5%" },
-      sign_scene_text: "Decorate this park with whatever you want! You can draw, use emojis, add pictures, and anything else!",
       voices: makeVoices("2b")
     }
   },
@@ -82,27 +74,23 @@ var SCENE_PAIRS = [
     A: {
       scene_id: "underwater_nosun",
       scene_label: "underwater scene",
-      image: IMG_BASE + "rbb4_rule_b_nohearts.png",
+      image: IMG_BASE + "youngerkids_underwater_nosun.png",
       rule_target: "sun",
       rule_text: "No sun underwater.",
       rule_question_text: "suns underwater",
       alternative_question_text: "moons underwater",
       forbidden_stickers: ["☀️"],
-      sign_box: { left: "68.8%", top: "62.4%", width: "25.8%", height: "17.6%" },
-      sign_scene_text: "Decorate this underwater scene with whatever you want! You can draw, use emojis, and pictures.",
       voices: makeVoices("3a")
     },
     B: {
       scene_id: "underwater_nomoon",
       scene_label: "underwater scene",
-      image: IMG_BASE + "rbb4_rule_b_nohearts.png",
+      image: IMG_BASE + "youngerkids_underwater_nomoon.png",
       rule_target: "moon",
       rule_text: "No moon underwater.",
       rule_question_text: "moons underwater",
       alternative_question_text: "suns underwater",
       forbidden_stickers: ["🌙"],
-      sign_box: { left: "68.8%", top: "62.4%", width: "25.8%", height: "17.6%" },
-      sign_scene_text: "Decorate this underwater scene with whatever you want! You can draw, use emojis, and pictures.",
       voices: makeVoices("3b")
     }
   }
@@ -211,22 +199,7 @@ function makeIntroPageHTML() {
     "<p style='margin:0 0 12px;'>Use the buttons at the bottom to go to the next part. If you don't see a button, scroll down.</p>",
     "<p style='margin:0;'>You can decorate each picture for up to 10 minutes.</p>",
     "</div>",
-    "</div>"
-  ].join("");
-}
-
-function makeSignOverlayHTML(scene) {
-  if (!scene || !scene.sign_box) return "";
-  var box = scene.sign_box;
-  return [
-    "<div aria-hidden='true' style='position:absolute;left:", box.left,
-    ";top:", box.top,
-    ";width:", box.width,
-    ";height:", box.height,
-    ";box-sizing:border-box;background:#fff;border:3px solid #1111b8;padding:2px 5px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;text-align:center;font-family:Arial,sans-serif;color:#111;line-height:1.08;pointer-events:none;'>",
-    "<div style='font-size:clamp(7px,1vw,12px);'>Welcome!</div>",
-    "<div style='font-size:clamp(6px,.88vw,10px);'>", scene.sign_scene_text, "</div>",
-    "<div style='font-size:clamp(7px,1vw,12px);font-weight:bold;text-transform:uppercase;'>", scene.rule_text, "</div>",
+    "<p style='margin:20px 0 0;font-size:26px;font-weight:bold;color:#9a3412;'>When you're ready, click the orange Start practice button below.</p>",
     "</div>"
   ].join("");
 }
@@ -242,7 +215,7 @@ function makeTrialHTML(prompt, imageUrl, options) {
   var scene = "";
 
   if (imageUrl) {
-    scene = "<img src='" + imageUrl + "' style='width:100%;height:100%;object-fit:cover;display:block;'>" + (options.signOverlay || "");
+    scene = "<img src='" + imageUrl + "' alt='' style='width:100%;height:100%;object-fit:cover;display:block;'>";
   }
 
   var practiceBox = "";
@@ -571,7 +544,7 @@ function makeReviewPreviewHTML() {
   return [
     "<div style='width:min(760px,90vw);margin:0 auto 18px;font-family:Arial,sans-serif;'>",
     "<div style='position:relative;width:100%;aspect-ratio:3 / 2;overflow:hidden;border:3px solid #1f2933;background:#f7fafc;pointer-events:none;'>",
-    scene ? "<img src='" + scene.image + "' style='width:100%;height:100%;object-fit:cover;display:block;'>" + makeSignOverlayHTML(scene) : "",
+    scene ? "<img src='" + scene.image + "' alt='' style='width:100%;height:100%;object-fit:cover;display:block;'>" : "",
     stickers,
     "</div>",
     "</div>"
@@ -766,8 +739,7 @@ function makeSceneTrial(scene) {
   return {
     type: jsPsychHtmlButtonResponse,
     stimulus: makeTrialHTML(getConditionScript(scene), scene.image, {
-      stickerList: ALL_STICKERS,
-      signOverlay: makeSignOverlayHTML(scene)
+      stickerList: ALL_STICKERS
     }),
     choices: ["Next"],
     trial_duration: 10 * 60 * 1000,

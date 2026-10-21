@@ -3,7 +3,12 @@ var jsPsych = initJsPsych();
 var IMG_BASE = "../img/";
 var AUDIO_BASE = "../mp3/chs_sign_task_break2/";
 var FALLBACK_AUDIO_BASE = "../mp3/chs_sign_task/";
-var CONDITION = "prior";
+
+var params = new URLSearchParams(window.location.search);
+var urlCondition = (params.get("condition") || "").toLowerCase();
+var CONDITION = urlCondition === "prior" || urlCondition === "first"
+  ? urlCondition
+  : jsPsych.randomization.sampleWithoutReplacement(["prior", "first"], 1)[0];
 
 var SCENES = [
   {
@@ -15,6 +20,7 @@ var SCENES = [
     rule_question_text: "cats on the desk",
     forbidden_stickers: ["🐱", "😺"],
     prior_voice: AUDIO_BASE + "prior_classroom_nocats.mp3",
+    first_voice: FALLBACK_AUDIO_BASE + "first_classroom_nocats.mp3",
     final_voice_key: "cats"
   },
   {
@@ -26,6 +32,7 @@ var SCENES = [
     rule_question_text: "fish in the mountain",
     forbidden_stickers: ["🐠", "🐟"],
     prior_voice: AUDIO_BASE + "prior_mountain_nofish.mp3",
+    first_voice: FALLBACK_AUDIO_BASE + "first_mountain_nofish.mp3",
     final_voice_key: "fish"
   },
   {
@@ -37,6 +44,7 @@ var SCENES = [
     rule_question_text: "hearts underwater",
     forbidden_stickers: ["💙", "❤️", "💛", "💚", "💜", "🧡", "🤍"],
     prior_voice: AUDIO_BASE + "prior_underwater_nohearts.mp3",
+    first_voice: FALLBACK_AUDIO_BASE + "first_underwater_nohearts.mp3",
     final_voice_key: "hearts"
   }
 ];
@@ -759,7 +767,8 @@ function makeSceneTrial(scene, isFinalScene) {
         forbiddenStickers: scene.forbidden_stickers,
         startLocked: true
       });
-      var audio = playPageAudio(scene.prior_voice);
+      var pageAudio = CONDITION === "prior" ? scene.prior_voice : scene.first_voice;
+      var audio = playPageAudio(pageAudio);
       scheduleDecoratingUnlock(audio, lockToken);
     },
     on_finish: function(data) {

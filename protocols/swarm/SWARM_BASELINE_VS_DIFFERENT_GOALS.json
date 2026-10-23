@@ -181,7 +181,7 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
@@ -207,7 +207,7 @@
         {
           "data": {
             "trial_role": "attention_between_tests",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -242,7 +242,7 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
@@ -268,7 +268,7 @@
         {
           "data": {
             "trial_role": "attention_between_tests",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -303,7 +303,7 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
@@ -329,7 +329,7 @@
         {
           "data": {
             "trial_role": "attention_between_tests",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -364,7 +364,7 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
@@ -389,36 +389,6 @@
         }
       ],
       "parameterSets": [
-        {
-          "CONDITION": "baseline_half_number_one_group-first",
-          "STUDY_CONDITION": "baseline",
-          "GOAL_STRUCTURE": "none",
-          "REVEAL_NUMBER": "half_number",
-          "MEASUREMENT_DELAY": 5,
-          "OUTCOME01": "one_group",
-          "TEST01": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
-          "OUTCOME02": "two_groups",
-          "TEST02": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
-          "OUTCOME03": "one_group",
-          "TEST03": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
-          "OUTCOME04": "two_groups",
-          "TEST04": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal"
-        },
-        {
-          "CONDITION": "baseline_half_number_two_groups-first",
-          "STUDY_CONDITION": "baseline",
-          "GOAL_STRUCTURE": "none",
-          "REVEAL_NUMBER": "half_number",
-          "MEASUREMENT_DELAY": 5,
-          "OUTCOME01": "two_groups",
-          "TEST01": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
-          "OUTCOME02": "one_group",
-          "TEST02": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
-          "OUTCOME03": "two_groups",
-          "TEST03": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
-          "OUTCOME04": "one_group",
-          "TEST04": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal"
-        },
         {
           "CONDITION": "baseline_full_number_one_group-first",
           "STUDY_CONDITION": "baseline",
@@ -508,9 +478,71 @@
           "TEST03": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal",
           "OUTCOME04": "one_group",
           "TEST04": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "same_goal_half_number_one_group-first",
+          "STUDY_CONDITION": "same_goal",
+          "GOAL_STRUCTURE": "same_goal",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "same_goal_half_number_two_groups-first",
+          "STUDY_CONDITION": "same_goal",
+          "GOAL_STRUCTURE": "same_goal",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "same_goal_full_number_one_group-first",
+          "STUDY_CONDITION": "same_goal",
+          "GOAL_STRUCTURE": "same_goal",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "same_goal_full_number_two_groups-first",
+          "STUDY_CONDITION": "same_goal",
+          "GOAL_STRUCTURE": "same_goal",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal"
         }
       ],
       "parameterSetWeights": [
+        1,
+        1,
         1,
         1,
         1,
@@ -985,7 +1017,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 1,
             "reveal_outcome": "INTRO_OUTCOME1",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -1013,7 +1045,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 2,
             "reveal_outcome": "INTRO_OUTCOME2",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -1041,7 +1073,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 3,
             "reveal_outcome": "INTRO_OUTCOME3",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -1069,7 +1101,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 4,
             "reveal_outcome": "INTRO_OUTCOME4",
-            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+            "protocol_version": "swarm-five-conditions-v3-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {

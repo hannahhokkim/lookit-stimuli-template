@@ -1,0 +1,74 @@
+[
+  {
+    "file": "baseline_one-group_half-number_50s-reveal.mp4",
+    "groups": 1,
+    "agents_per_group": 8,
+    "total_agents": 8,
+    "source": "clip02_group-test_reveal-one-group_audio-v18-50s-reveal.mp4",
+    "covered_opening_s": 2,
+    "source_reveal_segment_s": [
+      53,
+      56
+    ],
+    "transition_end_s": 5,
+    "final_display_hold_s": 50,
+    "total_duration_s": 55,
+    "fps": 30,
+    "frame_count": 1650,
+    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+  },
+  {
+    "file": "baseline_two-groups_half-number_50s-reveal.mp4",
+    "groups": 2,
+    "agents_per_group": 8,
+    "total_agents": 16,
+    "source": "clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal.mp4",
+    "covered_opening_s": 2,
+    "source_reveal_segment_s": [
+      53,
+      56
+    ],
+    "transition_end_s": 5,
+    "final_display_hold_s": 50,
+    "total_duration_s": 55,
+    "fps": 30,
+    "frame_count": 1650,
+    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+  },
+  {
+    "file": "baseline_one-group_full-number_50s-reveal.mp4",
+    "groups": 1,
+    "agents_per_group": 16,
+    "total_agents": 16,
+    "source": "clip03_group-test_reveal-one-group_audio-v18-50s-reveal.mp4",
+    "covered_opening_s": 2,
+    "source_reveal_segment_s": [
+      53,
+      56
+    ],
+    "transition_end_s": 5,
+    "final_display_hold_s": 50,
+    "total_duration_s": 55,
+    "fps": 30,
+    "frame_count": 1650,
+    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+  },
+  {
+    "file": "baseline_two-groups_full-number_50s-reveal.mp4",
+    "groups": 2,
+    "agents_per_group": 16,
+    "total_agents": 32,
+    "source": "clip04_group-test_reveal-two-groups_audio-v18-50s-reveal.mp4",
+    "covered_opening_s": 2,
+    "source_reveal_segment_s": [
+      53,
+      56
+    ],
+    "transition_end_s": 5,
+    "final_display_hold_s": 50,
+    "total_duration_s": 55,
+    "fps": 30,
+    "frame_count": 1650,
+    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+  }
+]

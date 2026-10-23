@@ -1,0 +1,990 @@
+{
+  "frames": {
+    "survey": {
+      "kind": "exp-lookit-survey",
+      "formSchema": {
+        "schema": {
+          "type": "object",
+          "title": "Thank you for completing the main portion of the study. We just have a few more questions about you and your child before you are done! These questions will be related to the size of you and your child's social network.",
+          "properties": {
+            "daycare": {
+              "enum": [
+                "0 hours per week",
+                "1-10 hours per week",
+                "11-20 hours per week",
+                "21-30 hours per week",
+                "More than 30 hours per week"
+              ],
+              "title": "Approximately how much time does your child spend in daycare every week?",
+              "default": " "
+            },
+            "parents": {
+              "enum": [
+                "1 caregiver",
+                "2 caregivers",
+                "3 caregivers",
+                "4 caregivers",
+                "5 or more caregivers"
+              ],
+              "title": "How many different caregivers are usually present (e.g. parents, grandparents, nannies, etc.) in your child's home/homes?",
+              "default": " "
+            },
+            "siblings": {
+              "enum": [
+                "My child does not have any siblings",
+                "1 sibling",
+                "2 siblings",
+                "3 siblings",
+                "4 siblings",
+                "5 or more siblings"
+              ],
+              "title": "How many siblings does your child have?",
+              "default": " "
+            },
+            "daycare-2": {
+              "enum": [
+                "My child does not go to daycare",
+                "0-3 other children",
+                "4-6 other children",
+                "7-9 other children",
+                "9+ other children"
+              ],
+              "title": "If your child attends daycare, approximately how many other children are present in their class or group?",
+              "default": " "
+            },
+            "soc-net-1": {
+              "enum": [
+                "0-4 people",
+                "5-9 people",
+                "10-14 people",
+                "15-20 people",
+                "More than 20 people"
+              ],
+              "title": "Approximately how many people have you had face-to-face social contact with (i.e. not including doctors, lawyers, hairdressers, employers, etc.) in the past 7 days?",
+              "default": " ",
+              "required": false
+            },
+            "soc-net-2": {
+              "title": "In the space below, please list the initials of everyone with whom you had some kind of face-to-face social contact during the last 7 days. Separate each initial with a space e.g. JD, BA.",
+              "required": false
+            }
+          }
+        },
+        "options": {
+          "fields": {
+            "daycare": {
+              "sort": false,
+              "order": 1,
+              "noneLabel": "-- Select --",
+              "removeDefaultNone": false
+            },
+            "parents": {
+              "sort": false,
+              "order": 3,
+              "noneLabel": "-- Select --",
+              "removeDefaultNone": false
+            },
+            "siblings": {
+              "sort": false,
+              "order": 4,
+              "noneLabel": "-- Select --",
+              "removeDefaultNone": false
+            },
+            "daycare-2": {
+              "sort": false,
+              "order": 2,
+              "noneLabel": "-- Select --",
+              "removeDefaultNone": false
+            },
+            "soc-net-1": {
+              "sort": false,
+              "order": 5,
+              "noneLabel": "-- Select --",
+              "removeDefaultNone": false
+            },
+            "soc-net-2": {
+              "order": 6
+            }
+          }
+        }
+      }
+    },
+    "debrief": {
+      "kind": "exp-lookit-exit-survey",
+      "debriefing": {
+        "title": "Thank you for participating!",
+        "blocks": [
+          {
+            "text": "We are studying whether babies have expectations about how friends and rivals interact with each other. More specifically, we were interested in whether babies expect a person to be sad if they see their rival and their friend having a positive interaction."
+          },
+          {
+            "text": "To do this, we will analyse your babies' looking behaviour and eye movements. Because babies like to look at things they find new and surprising, their eye movements can tell us a lot about what they are thinking!"
+          },
+          {
+            "text": "We are interested in studing how babies think about these questions because it will help us understand how babies learn about concepts like loyalty. If you would like to learn more about the work that we do, here is a link to our <a href='https://www.harvardlds.org/our-labs/thomas-lab/' target='_blank' rel='noopener'>lab's website</a>, and a <a href='https://www.youtube.com/watch?v=-qul57hcu4I' target='_blank' rel='noopener'>ted talk</a> about infant's moral development."
+          },
+          {
+            "text": "Your gift card will arrive in 1-2 weeks. To be eligible for this gift-card, you must have submitted a valid consent form, your child must have been visible during the study, and your child must be in the correct age range for this study. Each child can only recieve a single gift-card. If you have any questions or if you do not receive your giftcard, please contact us through lookit or at our lab's email address (thomasbabylab@gmail.com)."
+          }
+        ]
+      }
+    },
+    "study-end": {
+      "kind": "exp-lookit-text",
+      "blocks": [
+        {
+          "emph": false,
+          "title": "We're all done with the video portion of the study! Great job!"
+        },
+        {
+          "text": " Next, we'll ask you a few questions about your child's social network and ask you to fill out a short exit survey, where you'll be asked about to confirm some information and select your level of privacy. Your baby does not need to be with you now. Once you submit that survey, there'll be a little debrief where we give more background information about the study and provide some links where you can find out more on your own."
+        }
+      ],
+      "showPreviousButton": false
+    },
+    "study-intro": {
+      "kind": "exp-lookit-text",
+      "blocks": [
+        {
+          "emph": true,
+          "text": "Important: your child does not need to be with you until the videos begin",
+          "title": "Do babies think of groups as one entity?"
+        },
+        {
+          "text": "During this study your baby will watch videos of animated shapes approaching different things while we record where your baby is looking."
+        },
+        {
+          "text": "After completing the consent form and reading the instructions you’ll start the experiment when you and your baby are ready."
+        },
+        {
+          "text": "The instructions and consent section will take around three minutes, and the video section will take around eight to ten minutes. After the videos, you will answer a few final questions. Then you're all done!"
+        },
+        {
+          "text": "Before you start, please think about which room would be best suited for the study. First, make sure that your child can comfortably sit and see the computer screen. Ideally, the location would also be quiet, and relatively distraction-free. We realize this is not always possible."
+        }
+      ],
+      "showPreviousButton": false
+    },
+    "test-trials": {
+      "kind": "choice",
+      "sampler": "random-parameter-set",
+      "frameList": [
+        {
+          "data": {
+            "trial_index": 1,
+            "trial_role": "swarm_test",
+            "study_condition": "STUDY_CONDITION",
+            "goal_structure": "GOAL_STRUCTURE",
+            "reveal_number": "REVEAL_NUMBER",
+            "reveal_outcome": "OUTCOME01",
+            "assigned_condition": "CONDITION",
+            "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
+            "maximum_reveal_measurement_s": 50,
+            "instructed_lookaway_s": 2,
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video-infant-control",
+          "video": {
+            "loop": false,
+            "source": "TEST01",
+            "position": "fill"
+          },
+          "pauseKey": "p",
+          "pausedText": "Study paused \n\n Press 'p' to resume",
+          "autoProceed": true,
+          "doRecording": true,
+          "endTrialKey": " ",
+          "restartAfterPause": true,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false,
+          "measurementPeriodDelay": "MEASUREMENT_DELAY",
+          "lookawayKey": "",
+          "lookawayTone": "none",
+          "requireVideoCount": 1,
+          "requireAudioCount": 0,
+          "requiredDuration": 0
+        },
+        {
+          "data": {
+            "trial_role": "attention_between_tests",
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "Fam",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_index": 2,
+            "trial_role": "swarm_test",
+            "study_condition": "STUDY_CONDITION",
+            "goal_structure": "GOAL_STRUCTURE",
+            "reveal_number": "REVEAL_NUMBER",
+            "reveal_outcome": "OUTCOME02",
+            "assigned_condition": "CONDITION",
+            "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
+            "maximum_reveal_measurement_s": 50,
+            "instructed_lookaway_s": 2,
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video-infant-control",
+          "video": {
+            "loop": false,
+            "source": "TEST02",
+            "position": "fill"
+          },
+          "pauseKey": "p",
+          "pausedText": "Study paused \n\n Press 'p' to resume",
+          "autoProceed": true,
+          "doRecording": true,
+          "endTrialKey": " ",
+          "restartAfterPause": true,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false,
+          "measurementPeriodDelay": "MEASUREMENT_DELAY",
+          "lookawayKey": "",
+          "lookawayTone": "none",
+          "requireVideoCount": 1,
+          "requireAudioCount": 0,
+          "requiredDuration": 0
+        }
+      ],
+      "parameterSets": [
+        {
+          "CONDITION": "baseline_half_number_one_group-first",
+          "STUDY_CONDITION": "baseline",
+          "GOAL_STRUCTURE": "none",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 5,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal"
+        },
+        {
+          "CONDITION": "baseline_half_number_two_groups-first",
+          "STUDY_CONDITION": "baseline",
+          "GOAL_STRUCTURE": "none",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 5,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal"
+        },
+        {
+          "CONDITION": "baseline_full_number_one_group-first",
+          "STUDY_CONDITION": "baseline",
+          "GOAL_STRUCTURE": "none",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 5,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal"
+        },
+        {
+          "CONDITION": "baseline_full_number_two_groups-first",
+          "STUDY_CONDITION": "baseline",
+          "GOAL_STRUCTURE": "none",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 5,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal"
+        },
+        {
+          "CONDITION": "different_goals_half_number_one_group-first",
+          "STUDY_CONDITION": "different_goals",
+          "GOAL_STRUCTURE": "different_goals",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "different_goals_half_number_two_groups-first",
+          "STUDY_CONDITION": "different_goals",
+          "GOAL_STRUCTURE": "different_goals",
+          "REVEAL_NUMBER": "half_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "different_goals_full_number_one_group-first",
+          "STUDY_CONDITION": "different_goals",
+          "GOAL_STRUCTURE": "different_goals",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "one_group",
+          "TEST01": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME02": "two_groups",
+          "TEST02": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal"
+        },
+        {
+          "CONDITION": "different_goals_full_number_two_groups-first",
+          "STUDY_CONDITION": "different_goals",
+          "GOAL_STRUCTURE": "different_goals",
+          "REVEAL_NUMBER": "full_number",
+          "MEASUREMENT_DELAY": 54,
+          "OUTCOME01": "two_groups",
+          "TEST01": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME02": "one_group",
+          "TEST02": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal"
+        }
+      ],
+      "parameterSetWeights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "commonFrameProperties": {
+        "kind": "exp-lookit-video-infant-control",
+        "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+        "audioTypes": [
+          "mp3"
+        ],
+        "videoTypes": [
+          "mp4"
+        ],
+        "autoProceed": true,
+        "backgroundColor": "black"
+      }
+    },
+    "video-config": {
+      "kind": "exp-video-config",
+      "troubleshootingIntro": "If your having any trouble getting your webacam setup, please contact the Thomas Lab at 617-468-8407 and we would be glad to help you out!"
+    },
+    "video-consent": {
+      "gdpr": false,
+      "kind": "exp-lookit-video-consent",
+      "PIName": "Ashley Thomas",
+      "datause": "If you participate in this study, we (the research group led by Ashley Thomas at Harvard University) will have access to webcam recordings and other data collected during this session your account profile and demographic survey the child profile for the child who is participating. This includes changes you make in the future to any of this information. We may put different types of information together to learn more about child development. For instance, if your child participates in multiple studies from our group, we may look at how his or her responses compare across studies, or we may look at whether siblings tend to respond similarly. We may also study connections between children's responses and family demographic survey data. \n\n During the session, you and your child will be recorded by your computer's webcam and microphone. These webcam recordings, and other data like answers you enter in forms, are sent securely to the Lookit platform. You can view your past recordings on Lookit at any time. \n\n If we do not receive a consent recording (the video you’ll make to the right) for this session and cannot verify that you agreed to participate, no other video from your session will be viewed. \n\n At the end of the session, you will be prompted to choose a privacy level for your webcam recordings. You will also have the option to withdraw your video data at this point. If you do, only your consent recording will be kept, and all other recordings will be deleted.\n\n Data are stored securely on Lookit servers and at our research facility, and/or remote server. However, there is always a small risk that data transmitted over the internet may be intercepted or that the security of stored data may be compromised.\n\n Because this study is being run on the Lookit platform, researchers working on the Lookit project at MIT will also have access to the raw video data collected during this session, in addition to your account data, child profiles, and demographic survey responses. This data may be used by Lookit to detect and fix technical problems or identify new features that would be helpful; provide support to study researchers; assess data quality (for instance, how well an observer can tell which direction children are looking); evaluate the site’s success in reaching a diverse population; and characterize family engagement (for instance, looking at what aspects of a study make parents more interested in coming back later). Lookit stores data indefinitely unless you withdraw your recordings at the end of the study. Only researchers associated with this project and the Lookit project at MIT will have access to the raw video data. \n\n All information coded from it will be associated with a code number rather than a name for us to identify it. To make research transparent to the scientific and broader community, our study design and unidentifiable data are made publicly available on the Open Science Framework (OSF), a network of research materials and collaboration software, but your child’s data will not be in anyway identifiable. We may publish individual responses that cannot identify children, like looking times or sequences of button presses. We never publish children’s birthdates or names. We would never share your video data outside of our lab without your given consent. No video clips will be published or shared unless you allow this when selecting a privacy level. We never publish information that would make it possible to link recordings with your demographic data. Even if you choose to share your recordings, your demographic information is never published. \n\n Once all identifiers are removed from your child’s identifiable private information collected during this research, that information could be used for future research studies or distributed to another investigator for future research studies without you or your child’s additional informed consent. \n\n Efforts will be made to limit the use and disclosure of your child’s personal Information, including research study records, to people who have a need to review this information. We cannot promise complete secrecy. Organizations that may inspect and copy your child’s information include the IRB and other representatives of this organization.",
+      "payment": "We cannot promise any benefits to your child due to their participation in the study. However, we hope that your child will enjoy the study, and your child’s participation may improve our understanding of certain phenomena in the field of Developmental Psychology, as this study attempts to provide deeper insight into how babies think and learn about the social world of people. You will also receive a $5 gift card for completing this study, and you will still be compensated if you do not complete the study in full.",
+      "purpose": "We invite your child to take part in a research study because this study examines how typically developing infants in their age range understand and learn about the world.",
+      "template": "consent_005",
+      "PIContact": "Ashley Thomas at athomas@g.harvard.edu",
+      "procedures": "Someone will explain this asynchronous research study to you in the form of a video or summary. Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. \n\n The study session will be conducted remotely and recorded through Lookit. During the study, your child will be observed and recorded for data collection purposes only. \n\n During the study, your baby will be presented with videotaped events, recorded puppet-show sequences, pictures, or computer-generated animated sequences. All images, audio, and videos will be presented to your child through Lookit. We will measure your child's patterns of looking or other naturally occurring responses, such as reaching or pointing to objects, or smiling at people. \n\n You will also be asked to complete several questionnaires that will help us better understand your infant’s development and behavior. They are optional, so you may fill out as much as you would like. The information you provide helps us to better understand data and social cognitive development more broadly.",
+      "institution": "Harvard University",
+      "risk_statement": "We don’t believe there are any risks for your child from participating in this research. You and your child are free to choose whether to be in this study. If you do choose to participate, it’s okay to stop at any point during the session. There has been no harm to infants involved in this study, and there are no risks associated with their participation.",
+      "include_databrary": true,
+      "research_rights_statement": "You are not waiving any legal claims, rights, or remedies because of your participation in this research study. If you have questions, concerns, or complaints, or think the research has hurt your child, talk to the research team at 617-384-7777. You can also contact the PI, Ashley Thomas, athomas@g.harvard.edu. This research has been reviewed and approved by the Harvard University Area Institutional Review Board (“IRB”). You may talk to them at (617) 4962847 or cuhs@harvard.edu if: \n ● Your questions, concerns, or complaints are not being answered by the research team. \n ● You cannot reach the research team. \n ● You want to talk to someone besides the research team. \n ● You have questions about your child’s rights as a research subject. \n ● You want to get information or provide input about this research."
+    },
+    "video-preview": {
+      "kind": "exp-lookit-stimuli-preview",
+      "blocks": [
+        {
+          "text": "We'll also ask that you close your eyes, cover your eyes, or wear sunglasses for the duration of the study. The reason we ask this is that your child is learning from you all the time, and you may unconsciously or accidentally influence your child's attention. We want to make sure we're measuring your child's preferences, not yours!"
+        },
+        {
+          "text": "If you'd like to see an example of a video your child will be shown, you can take a look ahead of time now. It's important that you watch the video without your child, so that the videos will still be new to them."
+        }
+      ],
+      "baseDir": "https://harm-perception-lookit.s3.ca-central-1.amazonaws.com/",
+      "stimuli": [
+        {
+          "video": "preview",
+          "caption": "Here is a short preview of a video in which an actor shares cookies:"
+        }
+      ],
+      "videoTypes": [
+        "webm",
+        "mp4"
+      ],
+      "skipButtonText": "Skip preview",
+      "previewButtonText": "Preview a video (my child can't see the screen)",
+      "showPreviousButton": true
+    },
+    "video-quality": {
+      "kind": "exp-video-config-quality",
+      "title": "Webcam Setup",
+      "introText": "We'll be analyzing where your child chooses to look during the videos--but only if we can tell where that is! Please check each of the following to ensure we're able to use your video:",
+      "showRecordMenu": false,
+      "requireTestVideo": false,
+      "completedItemText": "Did it!",
+      "instructionBlocks": [
+        {
+          "text": "<strong>Make sure the webcam you're using is roughly centered</strong> relative to this monitor. This makes it much easier for us to tell where your child is looking!",
+          "image": {
+            "alt": "Example images of using centered external webcam on monitor or built-in webcam on laptop.",
+            "src": "https://s3.amazonaws.com/lookitcontents/website/centering.png"
+          }
+        },
+        {
+          "text": "<strong>Turn off any other monitors</strong> connected to your computer, besides the one with the centered webcam. (If there's just one monitor, you're all set!)",
+          "image": {
+            "alt": "Example images showing laptop screen turned off if using external monitor and webcam, or external monitor turned off if using built-in webcam and laptop screen.",
+            "src": "https://s3.amazonaws.com/lookitcontents/website/monitors.png"
+          }
+        },
+        {
+          "text": "Check the lighting by making sure you can <strong>clearly see your own eyes</strong> on the webcam view to the right. You may need to either turn on a light or reduce light coming from behind you.",
+          "image": {
+            "alt": "Example images showing good lighting, room too dark, and backlit scene where eyes are not visible.",
+            "src": "https://s3.amazonaws.com/lookitcontents/website/lighting.png"
+          }
+        },
+        {
+          "text": "If it's practical, <strong>minimize exciting things</strong> that are visible behind or to the side of the screen--for instance, by facing a wall instead of the kitchen. (If this isn't practical for you, don't worry about it--just check the box!)",
+          "image": {
+            "alt": "Example images showing a child and puppy next to the computer, versus a computer just on its own.",
+            "src": "https://s3.amazonaws.com/lookitcontents/website/distractions.png"
+          }
+        },
+        {
+          "text": "During the study, we'll ask that you sit with your child in your lap, like this. <strong>Make sure the webcam is angled up or down enough that your child's eyes are visible in this position</strong>.",
+          "image": {
+            "alt": "Example image showing a child sitting on his mother's lap.",
+            "src": "https://tecl-intervener-lookit.s3.ca-central-1.amazonaws.com/images/baby-in-lap.jpg"
+          }
+        }
+      ],
+      "requireItemConfirmation": true,
+      "recordingInstructionText": "You should be able to see your camera view above."
+    },
+    "instructions-1": {
+      "kind": "exp-lookit-instructions",
+      "blocks": [
+        {
+          "title": "Instructions (Your child does not need to be with you yet)"
+        },
+        {
+          "title": "What's going to happen:",
+          "listblocks": [
+            {
+              "text": "First, we'll make sure that you and your child are all set up."
+            },
+            {
+              "text": "Then, we'll play some videos for your child to watch. The videos should take about 8-10 minutes."
+            }
+          ]
+        },
+        {
+          "text": "Please turn the volume up so it's easy to hear but still comfortable.",
+          "title": "First thing's first: checking your audio.",
+          "mediaBlock": {
+            "text": "You should hear 'Ready to go?'",
+            "isVideo": false,
+            "sources": [
+              {
+                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.mp3",
+                "type": "audio/mp3"
+              },
+              {
+                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.ogg",
+                "type": "audio/ogg"
+              }
+            ],
+            "mustPlay": true,
+            "warningText": "Please try playing the sample audio."
+          }
+        }
+      ],
+      "nextButtonText": "More instructions!"
+    },
+    "instructions-2": {
+      "kind": "exp-lookit-instructions",
+      "blocks": [
+        {
+          "title": "What will happen during the study",
+          "text": "Your child will first watch four short introductory videos. Then there will be two test videos. In some versions, characters move toward objects before a screen lifts. In other versions, the screen lifts without those actions."
+        },
+        {
+          "text": "Please let your child watch naturally. Avoid directing their attention or describing the videos."
+        },
+        {
+          "text": "During the two test videos, wait until the screen has lifted and the characters are revealed. Then press the spacebar when your child has looked away continuously for about two seconds. Brief looks away do not end the trial."
+        },
+        {
+          "text": "The introductory videos end automatically. You can pause by pressing P."
+        }
+      ],
+      "nextButtonText": "More instructions!",
+      "displayFullscreen": false
+    },
+    "instructions-3": {
+      "kind": "exp-lookit-instructions",
+      "blocks": [
+        {
+          "title": "When to end a test video",
+          "text": "After the screen lifts, watch your child. If they look away, count slowly: one, two. Press the spacebar if they are still looking away. If they look back before then, keep the video going and start counting again the next time they look away."
+        },
+        {
+          "text": "The spacebar will not end a test during its opening sequence. If your child needs a break, press P instead."
+        }
+      ],
+      "nextButtonText": "See example!"
+    },
+    "instructions-4": {
+      "kind": "exp-lookit-video-infant-control",
+      "audio": {
+        "loop": false,
+        "source": "peekaboo"
+      },
+      "video": {
+        "source": "parent-control-practice-front",
+        "position": "fill"
+      },
+      "baseDir": "https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/resources",
+      "pauseKey": "p",
+      "audioTypes": [
+        "mp3"
+      ],
+      "pauseVideo": "attentiongrabber",
+      "pausedText": "Study paused \n\n Press 'p' to resume",
+      "videoTypes": [
+        "mp4"
+      ],
+      "autoProceed": true,
+      "doRecording": false,
+      "endTrialKey": " ",
+      "backgroundColor": "white",
+      "parentTextBlock": {
+        "text": "This example shows a sustained look away. For our study, use about TWO seconds of looking away before pressing the spacebar; the example parent may respond later."
+      },
+      "requiredDuration": 0,
+      "requireAudioCount": 0,
+      "requireVideoCount": 1,
+      "restartAfterPause": true,
+      "lookawayKey": "",
+      "lookawayTone": "none"
+    },
+    "instructions-5": {
+      "kind": "exp-lookit-video-infant-control",
+      "audio": {
+        "loop": false,
+        "source": "peekaboo"
+      },
+      "video": {
+        "source": "parent-control-practice-back",
+        "position": "fill"
+      },
+      "baseDir": "https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/resources",
+      "pauseKey": "p",
+      "audioTypes": [
+        "mp3"
+      ],
+      "pauseVideo": "attentiongrabber",
+      "pausedText": "Study paused \n\n Press 'p' to resume",
+      "videoTypes": [
+        "mp4"
+      ],
+      "autoProceed": true,
+      "doRecording": false,
+      "endTrialKey": " ",
+      "backgroundColor": "white",
+      "parentTextBlock": {
+        "text": "Practice pressing the spacebar after the child has looked away continuously for about TWO seconds."
+      },
+      "requiredDuration": 0,
+      "requireAudioCount": 0,
+      "requireVideoCount": 1,
+      "restartAfterPause": true,
+      "lookawayKey": "",
+      "lookawayTone": "none"
+    },
+    "instructions-6": {
+      "kind": "exp-lookit-instructions",
+      "blocks": [
+        {
+          "title": "Well done!",
+          "listblocks": [
+            {
+              "text": "Use about two continuous seconds of looking away. You do not need to time it perfectly. If your child looks back before two seconds, keep the trial going."
+            },
+            {
+              "text": "It can be hard to see where your child is looking from behind, and that's ok. You don't need to peek over their shoulder to see where they are looking, as that might distract them away from the screen. You can start counting when they turn their away head."
+            }
+          ]
+        },
+        {
+          "text": "Are you ready? Let's get set up!"
+        }
+      ],
+      "nextButtonText": "Set up instructions"
+    },
+    "instructions-7": {
+      "kind": "exp-lookit-instructions",
+      "blocks": [
+        {
+          "title": "Let's get set-up:"
+        },
+        {
+          "text": "If possible, complete the study in a quiet room, away from windows, open doorways, toys, pets, siblings - interesting things to look at and reach for. For example, a home office is better than a busy kitchen (We understand if not all of this is possible!). \n\n",
+          "image": {
+            "alt": "No distractions",
+            "src": "https://www.mit.edu/~kimscott/intermodal/img/distractions.png"
+          }
+        },
+        {
+          "text": "\n\n Please make sure your webcam is centered on the screen (this should be the case for most laptops). \n\n ",
+          "image": {
+            "alt": "Center camera",
+            "src": "https://www.mit.edu/~kimscott/intermodal/img/centering.png"
+          }
+        },
+        {
+          "text": "\n\n If you are using two monitors, please turn one of them off. \n\n ",
+          "image": {
+            "alt": "Turn off monitor",
+            "src": "https://www.mit.edu/~kimscott/intermodal/img/monitors.png"
+          }
+        },
+        {
+          "text": "\n\n Please put the laptop or computer close to the baby, but far enough so that they can't reach forward and touch anything. \n\n "
+        },
+        {
+          "text": "\n\n Now, you can go ahead and put your child in a high chair and stand or sit behind them. \n\n",
+          "image": {
+            "alt": "Child in high chair",
+            "src": "https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/baby_high_chair.jpg",
+            "width": 50
+          }
+        },
+        {
+          "text": "\n\n If there is no high chair available, having your child on your lap is also ok. \n\n",
+          "image": {
+            "alt": "Child on lap",
+            "src": "https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/baby_on_lap.jpg"
+          }
+        },
+        {
+          "title": "Some final pointers",
+          "listblocks": [
+            {
+              "text": "<b> Don’t worry if your child isn’t looking at the screen the entire time!</b> There's no need to direct your child's attention towards the screen, since we want to see the decisions your child makes on their own! You can just try to keep their body oriented towards the screen so they can look if they want to. "
+            },
+            {
+              "text": "Try to avoid peeking over your child's shoulder to see what they're doing. We want to make sure your child isn't distracted away from the screen, when they would've looked otherwise!"
+            },
+            {
+              "text": "If you can do the entire study in one go, that's great. But you can also pause the study (press 'p') or stop the study (press esc-key) at any point."
+            },
+            {
+              "text": "Remember: after the screen lifts and the characters are revealed, press the spacebar when your child has looked away continuously for about two seconds."
+            }
+          ]
+        },
+        {
+          "title": "Ready?",
+          "listblocks": [
+            {
+              "text": "If your child is set up, go ahead and press the 'Check video!' button."
+            }
+          ]
+        }
+      ],
+      "nextButtonText": "Check video!"
+    },
+    "social-network": {
+      "kind": "exp-lookit-survey",
+      "formSchema": {
+        "schema": {
+          "type": "object",
+          "title": "Thank you for completing the main portion of the study. We just have a few more questions about you and your child before you are done! These questions will be related to the size of you and your child's social network.",
+          "properties": {
+            "peers": {
+              "title": "How many similar aged peers does your child regularly interact with (i.e. how many other toddlers and young children does your child see at least once per week). Please include kids in daycare, neighbours, family friends etc.",
+              "required": false
+            },
+            "adults": {
+              "title": "How many adults does your child regularly interact with in a week (i.e. how many adults does your child see at least once per week). Please include caregivers, nannies, teachers, etc.",
+              "required": false
+            },
+            "daycare": {
+              "title": "Approximately how many hours does your child spend in daycare per week? If your child is not in daycare, please type N/A.",
+              "required": false
+            },
+            "friends": {
+              "title": "How many friends does your child have? We define friends other children with whom your child has a close relationship.",
+              "required": false
+            },
+            "siblings": {
+              "title": "How many siblings does your child have?",
+              "required": false
+            },
+            "daycare-2": {
+              "title": "If your child attends daycare, approximately how many other children are present in their class or group?",
+              "required": false
+            }
+          }
+        },
+        "options": {
+          "fields": {
+            "peers": {
+              "order": 4
+            },
+            "adults": {
+              "order": 3
+            },
+            "daycare": {},
+            "friends": {
+              "order": 5
+            },
+            "siblings": {
+              "order": 6
+            },
+            "daycare-2": {
+              "order": 2
+            }
+          }
+        }
+      }
+    },
+    "webcam-preview": {
+      "kind": "exp-lookit-webcam-display",
+      "blocks": [
+        {
+          "title": "You're ready to start!",
+          "listblocks": [
+            {
+              "text": "Please make sure that your child is clearly visible."
+            },
+            {
+              "text": "The study will begin as soon as you press the next button."
+            }
+          ]
+        }
+      ],
+      "nextButtonText": "Next",
+      "showPreviousButton": true,
+      "displayFullscreenOverride": false,
+      "startRecordingAutomatically": false
+    },
+    "webcam-display-check": {
+      "kind": "exp-lookit-webcam-display",
+      "blocks": [
+        {
+          "title": "Last check: Does the video look good? Are your child's eyes visible?",
+          "listblocks": [
+            {
+              "text": "If so, you can go ahead and start the videos! The experiment will start once you press the button. See you in about 8-10 minutes!"
+            }
+          ]
+        }
+      ],
+      "nextButtonText": "Start the videos!",
+      "showPreviousButton": false,
+      "displayFullscreenOverride": true,
+      "startRecordingAutomatically": false
+    },
+    "swarm-attention-before-test": {
+      "data": {
+        "trial_role": "attention_before_test",
+        "attention_video": "Fam"
+      },
+      "kind": "exp-lookit-video",
+      "video": {
+        "loop": false,
+        "source": "Fam",
+        "position": "fill"
+      },
+      "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+      "audioTypes": [
+        "mp3"
+      ],
+      "videoTypes": [
+        "mp4"
+      ],
+      "autoProceed": true,
+      "doRecording": true,
+      "backgroundColor": "black",
+      "requireAudioCount": 0,
+      "requireVideoCount": 1,
+      "showWaitForUploadMessage": false,
+      "showWaitForRecordingMessage": false
+    },
+    "swarm-introduction": {
+      "kind": "choice",
+      "sampler": "random-parameter-set",
+      "frameList": [
+        {
+          "data": {
+            "trial_role": "intro_familiarization",
+            "trial_index": 1,
+            "reveal_outcome": "INTRO_OUTCOME1",
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "INTRO1",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_role": "intro_familiarization",
+            "trial_index": 2,
+            "reveal_outcome": "INTRO_OUTCOME2",
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "INTRO2",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_role": "intro_familiarization",
+            "trial_index": 3,
+            "reveal_outcome": "INTRO_OUTCOME3",
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "INTRO3",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_role": "intro_familiarization",
+            "trial_index": 4,
+            "reveal_outcome": "INTRO_OUTCOME4",
+            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "INTRO4",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        }
+      ],
+      "parameterSets": [
+        {
+          "INTRO1": "swarm-intro-familiarization/familiarization01_one-object",
+          "INTRO_OUTCOME1": "one_object",
+          "INTRO2": "swarm-intro-familiarization/familiarization02_two-objects",
+          "INTRO_OUTCOME2": "two_objects",
+          "INTRO3": "swarm-intro-familiarization/familiarization03_two-objects",
+          "INTRO_OUTCOME3": "two_objects",
+          "INTRO4": "swarm-intro-familiarization/familiarization04_one-object",
+          "INTRO_OUTCOME4": "one_object"
+        },
+        {
+          "INTRO1": "swarm-intro-familiarization/familiarization02_two-objects",
+          "INTRO_OUTCOME1": "two_objects",
+          "INTRO2": "swarm-intro-familiarization/familiarization01_one-object",
+          "INTRO_OUTCOME2": "one_object",
+          "INTRO3": "swarm-intro-familiarization/familiarization04_one-object",
+          "INTRO_OUTCOME3": "one_object",
+          "INTRO4": "swarm-intro-familiarization/familiarization03_two-objects",
+          "INTRO_OUTCOME4": "two_objects"
+        }
+      ],
+      "parameterSetWeights": [
+        1,
+        1
+      ]
+    }
+  },
+  "sequence": [
+    "video-config",
+    "study-intro",
+    "video-consent",
+    "instructions-1",
+    "instructions-2",
+    "instructions-3",
+    "instructions-4",
+    "instructions-5",
+    "instructions-6",
+    "instructions-7",
+    "webcam-display-check",
+    "swarm-introduction",
+    "swarm-attention-before-test",
+    "test-trials",
+    "study-end",
+    "social-network",
+    "debrief"
+  ],
+  "exact_text": "{\r\n    \"frames\": {\r\n        \"video-config\": {\r\n            \"kind\": \"exp-video-config\",\r\n            \"troubleshootingIntro\": \"If your having any trouble getting your webacam setup, please contact the Thomas Lab at 617-468-8407 and we would be glad to help you out!\"\r\n        },\r\n        \"video-consent\": {\r\n            \"kind\": \"exp-lookit-video-consent\",\r\n            \"template\": \"consent_005\",\r\n            \"PIName\": \"Ashley Thomas\",\r\n            \"institution\": \"Harvard University\",\r\n            \"PIContact\": \"Ashley Thomas at athomas@g.harvard.edu\",\r\n            \"purpose\": \"We invite your child to take part in a research study because this study examines how typically developing infants in their age range understand and learn about the world.\",\r\n            \"procedures\": \"Someone will explain this asynchronous research study to you in the form of a video or summary. Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. \\n\\n The study session will be conducted remotely and recorded through Lookit. During the study, your child will be observed and recorded for data collection purposes only. \\n\\n During the study, your baby will be presented with videotaped events, recorded puppet-show sequences, pictures, or computer-generated animated sequences. All images, audio, and videos will be presented to your child through Lookit. We will measure your child's patterns of looking or other naturally occurring responses, such as reaching or pointing to objects, or smiling at people. \\n\\n You will also be asked to complete several questionnaires that will help us better understand your infant’s development and behavior. They are optional, so you may fill out as much as you would like. The information you provide helps us to better understand data and social cognitive development more broadly.\",\r\n            \"risk_statement\": \"We don’t believe there are any risks for your child from participating in this research. You and your child are free to choose whether to be in this study. If you do choose to participate, it’s okay to stop at any point during the session. There has been no harm to infants involved in this study, and there are no risks associated with their participation.\",\r\n            \"payment\": \"We cannot promise any benefits to your child due to their participation in the study. However, we hope that your child will enjoy the study, and your child’s participation may improve our understanding of certain phenomena in the field of Developmental Psychology, as this study attempts to provide deeper insight into how babies think and learn about the social world of people. You will also receive a $5 gift card for completing this study, and you will still be compensated if you do not complete the study in full.\",\r\n            \"datause\": \"If you participate in this study, we (the research group led by Ashley Thomas at Harvard University) will have access to webcam recordings and other data collected during this session your account profile and demographic survey the child profile for the child who is participating. This includes changes you make in the future to any of this information. We may put different types of information together to learn more about child development. For instance, if your child participates in multiple studies from our group, we may look at how his or her responses compare across studies, or we may look at whether siblings tend to respond similarly. We may also study connections between children's responses and family demographic survey data. \\n\\n During the session, you and your child will be recorded by your computer's webcam and microphone. These webcam recordings, and other data like answers you enter in forms, are sent securely to the Lookit platform. You can view your past recordings on Lookit at any time. \\n\\n If we do not receive a consent recording (the video you’ll make to the right) for this session and cannot verify that you agreed to participate, no other video from your session will be viewed. \\n\\n At the end of the session, you will be prompted to choose a privacy level for your webcam recordings. You will also have the option to withdraw your video data at this point. If you do, only your consent recording will be kept, and all other recordings will be deleted.\\n\\n Data are stored securely on Lookit servers and at our research facility, and/or remote server. However, there is always a small risk that data transmitted over the internet may be intercepted or that the security of stored data may be compromised.\\n\\n Because this study is being run on the Lookit platform, researchers working on the Lookit project at MIT will also have access to the raw video data collected during this session, in addition to your account data, child profiles, and demographic survey responses. This data may be used by Lookit to detect and fix technical problems or identify new features that would be helpful; provide support to study researchers; assess data quality (for instance, how well an observer can tell which direction children are looking); evaluate the site’s success in reaching a diverse population; and characterize family engagement (for instance, looking at what aspects of a study make parents more interested in coming back later). Lookit stores data indefinitely unless you withdraw your recordings at the end of the study. Only researchers associated with this project and the Lookit project at MIT will have access to the raw video data. \\n\\n All information coded from it will be associated with a code number rather than a name for us to identify it. To make research transparent to the scientific and broader community, our study design and unidentifiable data are made publicly available on the Open Science Framework (OSF), a network of research materials and collaboration software, but your child’s data will not be in anyway identifiable. We may publish individual responses that cannot identify children, like looking times or sequences of button presses. We never publish children’s birthdates or names. We would never share your video data outside of our lab without your given consent. No video clips will be published or shared unless you allow this when selecting a privacy level. We never publish information that would make it possible to link recordings with your demographic data. Even if you choose to share your recordings, your demographic information is never published. \\n\\n Once all identifiers are removed from your child’s identifiable private information collected during this research, that information could be used for future research studies or distributed to another investigator for future research studies without you or your child’s additional informed consent. \\n\\n Efforts will be made to limit the use and disclosure of your child’s personal Information, including research study records, to people who have a need to review this information. We cannot promise complete secrecy. Organizations that may inspect and copy your child’s information include the IRB and other representatives of this organization.\",\r\n            \"include_databrary\": true,\r\n            \"gdpr\": false,\r\n            \"research_rights_statement\": \"You are not waiving any legal claims, rights, or remedies because of your participation in this research study. If you have questions, concerns, or complaints, or think the research has hurt your child, talk to the research team at 617-384-7777. You can also contact the PI, Ashley Thomas, athomas@g.harvard.edu. This research has been reviewed and approved by the Harvard University Area Institutional Review Board (“IRB”). You may talk to them at (617) 4962847 or cuhs@harvard.edu if: \\n ● Your questions, concerns, or complaints are not being answered by the research team. \\n ● You cannot reach the research team. \\n ● You want to talk to someone besides the research team. \\n ● You have questions about your child’s rights as a research subject. \\n ● You want to get information or provide input about this research.\"\r\n        },\r\n        \"study-intro\": {\r\n            \"blocks\": [\r\n                {\r\n                    \"emph\": true,\r\n                    \"text\": \"Important: your child does not need to be with you until the videos begin\",\r\n                    \"title\": \"Do babies think of groups as one entity?\"\r\n                },\r\n                {\r\n                    \"text\": \"During this study your baby will watch videos of animated shapes approaching different things while we record where your baby is looking.\"\r\n                },\r\n                {\r\n                    \"text\": \"After completing the consent form and reading the instructions you’ll start the experiment when you and your baby are ready.\"\r\n                },\r\n                {\r\n                    \"text\": \"The instructions and consent section will take around three minutes, and the video section will take around eight to ten minutes. After the videos, you will answer a few final questions. Then you're all done!\"\r\n                },\r\n                {\r\n                    \"text\": \"Before you start, please think about which room would be best suited for the study. First, make sure that your child can comfortably sit and see the computer screen. Ideally, the location would also be quiet, and relatively distraction-free. We realize this is not always possible.\"\r\n                }\r\n            ],\r\n            \"showPreviousButton\": false,\r\n            \"kind\": \"exp-lookit-text\"\r\n        },\r\n        \"instructions-1\": {\r\n            \"kind\": \"exp-lookit-instructions\",\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"Instructions (Your child does not need to be with you yet)\"\r\n                },\r\n                {\r\n                    \"title\": \"What's going to happen:\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"First, we'll make sure that you and your child are all set up.\"\r\n                        },\r\n                        {\r\n                            \"text\": \"Then, we'll play some videos for your child to watch. The videos should take about 8-10 minutes.\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"text\": \"Please turn the volume up so it's easy to hear but still comfortable.\",\r\n                    \"title\": \"First thing's first: checking your audio.\",\r\n                    \"mediaBlock\": {\r\n                        \"text\": \"You should hear 'Ready to go?'\",\r\n                        \"isVideo\": false,\r\n                        \"sources\": [\r\n                            {\r\n                                \"src\": \"https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.mp3\",\r\n                                \"type\": \"audio/mp3\"\r\n                            },\r\n                            {\r\n                                \"src\": \"https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.ogg\",\r\n                                \"type\": \"audio/ogg\"\r\n                            }\r\n                        ],\r\n                        \"mustPlay\": true,\r\n                        \"warningText\": \"Please try playing the sample audio.\"\r\n                    }\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"More instructions!\"\r\n        },\r\n        \"instructions-2\": {\r\n            \"kind\": \"exp-lookit-instructions\",\r\n            \"displayFullscreen\": false,\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"What will happen during the study\",\r\n                    \"text\": \"Your child will watch short animated videos. In these videos, small groups of characters come out from behind a screen, move toward objects, and then go back behind the screen. At the end of each video, the screen lifts and your child will see what is behind it.\"\r\n                },\r\n                {\r\n                    \"text\": \"Please let your child watch naturally. During the videos, please do not point, label the characters or objects, describe what is happening, or tell your child where to look.\"\r\n                },\r\n                {\r\n                    \"text\": \"Some videos will end on their own. We'll ask you to end some if your child looks away for some time.\"\r\n                },\r\n                {\r\n                    \"text\": \"You'll get more instructions on the next page!\"\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"More instructions!\"\r\n        },\r\n        \"instructions-3\": {\r\n            \"kind\": \"exp-lookit-instructions\",\r\n            \"restartAfterPause\": true,\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"Play the video below to see how to indicate when your child is done with a trial.\",\r\n                    \"mediaBlock\": {\r\n                        \"isVideo\": true,\r\n                        \"sources\": [\r\n                            {\r\n                                \"src\": \"https://betrayal-lookit.s3.ca-central-1.amazonaws.com/mp4/instruction_video_2.mp4\",\r\n                                \"type\": \"video/mp4\"\r\n                            },\r\n                            {\r\n                                \"src\": \"https://betrayal-lookit.s3.ca-central-1.amazonaws.com/mp4/instruction_video_2.webm\",\r\n                                \"type\": \"video/webm\"\r\n                            }\r\n                        ],\r\n                        \"mustPlay\": true,\r\n                        \"warningText\": \"Please finish watching the video.\"\r\n                    }\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"See example!\"\r\n        },\r\n        \"instructions-4\": {\r\n            \"kind\": \"exp-lookit-video-infant-control\",\r\n            \"endTrialKey\": \" \",\r\n            \"pauseKey\": \"p\",\r\n            \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n            \"audio\": {\r\n                \"loop\": false,\r\n                \"source\": \"peekaboo\"\r\n            },\r\n            \"video\": {\r\n                \"position\": \"fill\",\r\n                \"source\": \"parent-control-practice-front\"\r\n            },\r\n            \"backgroundColor\": \"white\",\r\n            \"autoProceed\": true,\r\n            \"parentTextBlock\": {\r\n                \"text\": \"Here you see a parent stopping the trial after their child has turned their head for about three seconds in a row. Notice the parent isn't stopping the trial for short looks away!\"\r\n            },\r\n            \"requiredDuration\": 0,\r\n            \"requireAudioCount\": 0,\r\n            \"requireVideoCount\": 1,\r\n            \"restartAfterPause\": true,\r\n            \"pauseVideo\": \"attentiongrabber\",\r\n            \"doRecording\": false,\r\n            \"baseDir\": \"https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/resources\",\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ]\r\n        },\r\n        \"instructions-5\": {\r\n            \"kind\": \"exp-lookit-video-infant-control\",\r\n            \"endTrialKey\": \" \",\r\n            \"pauseKey\": \"p\",\r\n            \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n            \"audio\": {\r\n                \"loop\": false,\r\n                \"source\": \"peekaboo\"\r\n            },\r\n            \"video\": {\r\n                \"position\": \"fill\",\r\n                \"source\": \"parent-control-practice-back\"\r\n            },\r\n            \"backgroundColor\": \"white\",\r\n            \"autoProceed\": true,\r\n            \"parentTextBlock\": {\r\n                \"text\": \"Let's practice this. <b> Press the spacebar when the child has looked away for approx. three seconds in a row! </b>\"\r\n            },\r\n            \"requiredDuration\": 0,\r\n            \"requireAudioCount\": 0,\r\n            \"requireVideoCount\": 1,\r\n            \"restartAfterPause\": true,\r\n            \"pauseVideo\": \"attentiongrabber\",\r\n            \"doRecording\": false,\r\n            \"baseDir\": \"https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/resources\",\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ]\r\n        },\r\n        \"instructions-6\": {\r\n            \"kind\": \"exp-lookit-instructions\",\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"Well done!\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"We hope you got a bit of a feeling for how to stop trials during the study. It is not essential that you stop after exactly three seconds, so don't worry that you're doing something wrong. You can count '1-Mississippi, 2-Mississippi' etc. \"\r\n                        },\r\n                        {\r\n                            \"text\": \"It can be hard to see where your child is looking from behind, and that's ok. You don't need to peek over their shoulder to see where they are looking, as that might distract them away from the screen. You can start counting when they turn their away head.\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"text\": \"Are you ready? Let's get set up!\"\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"Set up instructions\"\r\n        },\r\n        \"instructions-7\": {\r\n            \"kind\": \"exp-lookit-instructions\",\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"Let's get set-up:\"\r\n                },\r\n                {\r\n                    \"text\": \"If possible, complete the study in a quiet room, away from windows, open doorways, toys, pets, siblings - interesting things to look at and reach for. For example, a home office is better than a busy kitchen (We understand if not all of this is possible!). \\n\\n\",\r\n                    \"image\": {\r\n                        \"alt\": \"No distractions\",\r\n                        \"src\": \"https://www.mit.edu/~kimscott/intermodal/img/distractions.png\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"\\n\\n Please make sure your webcam is centered on the screen (this should be the case for most laptops). \\n\\n \",\r\n                    \"image\": {\r\n                        \"alt\": \"Center camera\",\r\n                        \"src\": \"https://www.mit.edu/~kimscott/intermodal/img/centering.png\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"\\n\\n If you are using two monitors, please turn one of them off. \\n\\n \",\r\n                    \"image\": {\r\n                        \"alt\": \"Turn off monitor\",\r\n                        \"src\": \"https://www.mit.edu/~kimscott/intermodal/img/monitors.png\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"\\n\\n Please put the laptop or computer close to the baby, but far enough so that they can't reach forward and touch anything. \\n\\n \"\r\n                },\r\n                {\r\n                    \"text\": \"\\n\\n Now, you can go ahead and put your child in a high chair and stand or sit behind them. \\n\\n\",\r\n                    \"image\": {\r\n                        \"alt\": \"Child in high chair\",\r\n                        \"src\": \"https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/baby_high_chair.jpg\",\r\n                        \"width\": 50\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"\\n\\n If there is no high chair available, having your child on your lap is also ok. \\n\\n\",\r\n                    \"image\": {\r\n                        \"alt\": \"Child on lap\",\r\n                        \"src\": \"https://raw.githubusercontent.com/GalRaz/mcs_lookit_stims/master/baby_on_lap.jpg\"\r\n                    }\r\n                },\r\n                {\r\n                    \"title\": \"Some final pointers\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"<b> Don’t worry if your child isn’t looking at the screen the entire time!</b> There's no need to direct your child's attention towards the screen, since we want to see the decisions your child makes on their own! You can just try to keep their body oriented towards the screen so they can look if they want to. \"\r\n                        },\r\n                        {\r\n                            \"text\": \"Try to avoid peeking over your child's shoulder to see what they're doing. We want to make sure your child isn't distracted away from the screen, when they would've looked otherwise!\"\r\n                        },\r\n                        {\r\n                            \"text\": \"If you can do the entire study in one go, that's great. But you can also pause the study (press 'p') or stop the study (press esc-key) at any point.\"\r\n                        },\r\n                        {\r\n                            \"text\": \"<b> Remember, after you hear a crying or laughing sound and one of the videos freezes on a still frame, press the spacebar when your child has looked away for approx. 3 seconds!\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"title\": \"Ready?\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"If your child is set up, go ahead and press the 'Check video!' button.\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"Check video!\"\r\n        },\r\n        \"webcam-display-check\": {\r\n            \"kind\": \"exp-lookit-webcam-display\",\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"Last check: Does the video look good? Are your child's eyes visible?\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"If so, you can go ahead and start the videos! The experiment will start once you press the button. See you in about 8-10 minutes!\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"Start the videos!\",\r\n            \"showPreviousButton\": false,\r\n            \"displayFullscreenOverride\": true,\r\n            \"startRecordingAutomatically\": false\r\n        },\r\n        \"webcam-preview\": {\r\n            \"kind\": \"exp-lookit-webcam-display\",\r\n            \"blocks\": [\r\n                {\r\n                    \"title\": \"You're ready to start!\",\r\n                    \"listblocks\": [\r\n                        {\r\n                            \"text\": \"Please make sure that your child is clearly visible.\"\r\n                        },\r\n                        {\r\n                            \"text\": \"The study will begin as soon as you press the next button.\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"nextButtonText\": \"Next\",\r\n            \"showPreviousButton\": true,\r\n            \"displayFullscreenOverride\": false,\r\n            \"startRecordingAutomatically\": false\r\n        },\r\n        \"video-preview\": {\r\n            \"kind\": \"exp-lookit-stimuli-preview\",\r\n            \"stimuli\": [\r\n                {\r\n                    \"caption\": \"Here is a short preview of a video in which an actor shares cookies:\",\r\n                    \"video\": \"preview\"\r\n                }\r\n            ],\r\n            \"baseDir\": \"https://harm-perception-lookit.s3.ca-central-1.amazonaws.com/\",\r\n            \"videoTypes\": [\r\n                \"webm\",\r\n                \"mp4\"\r\n            ],\r\n            \"blocks\": [\r\n                {\r\n                    \"text\": \"We'll also ask that you close your eyes, cover your eyes, or wear sunglasses for the duration of the study. The reason we ask this is that your child is learning from you all the time, and you may unconsciously or accidentally influence your child's attention. We want to make sure we're measuring your child's preferences, not yours!\"\r\n                },\r\n                {\r\n                    \"text\": \"If you'd like to see an example of a video your child will be shown, you can take a look ahead of time now. It's important that you watch the video without your child, so that the videos will still be new to them.\"\r\n                }\r\n            ],\r\n            \"skipButtonText\": \"Skip preview\",\r\n            \"previewButtonText\": \"Preview a video (my child can't see the screen)\",\r\n            \"showPreviousButton\": true\r\n        },\r\n        \"video-quality\": {\r\n            \"kind\": \"exp-video-config-quality\",\r\n            \"title\": \"Webcam Setup\",\r\n            \"introText\": \"We'll be analyzing where your child chooses to look during the videos--but only if we can tell where that is! Please check each of the following to ensure we're able to use your video:\",\r\n            \"requireItemConfirmation\": true,\r\n            \"completedItemText\": \"Did it!\",\r\n            \"instructionBlocks\": [\r\n                {\r\n                    \"text\": \"<strong>Make sure the webcam you're using is roughly centered</strong> relative to this monitor. This makes it much easier for us to tell where your child is looking!\",\r\n                    \"image\": {\r\n                        \"src\": \"https://s3.amazonaws.com/lookitcontents/website/centering.png\",\r\n                        \"alt\": \"Example images of using centered external webcam on monitor or built-in webcam on laptop.\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"<strong>Turn off any other monitors</strong> connected to your computer, besides the one with the centered webcam. (If there's just one monitor, you're all set!)\",\r\n                    \"image\": {\r\n                        \"src\": \"https://s3.amazonaws.com/lookitcontents/website/monitors.png\",\r\n                        \"alt\": \"Example images showing laptop screen turned off if using external monitor and webcam, or external monitor turned off if using built-in webcam and laptop screen.\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"Check the lighting by making sure you can <strong>clearly see your own eyes</strong> on the webcam view to the right. You may need to either turn on a light or reduce light coming from behind you.\",\r\n                    \"image\": {\r\n                        \"src\": \"https://s3.amazonaws.com/lookitcontents/website/lighting.png\",\r\n                        \"alt\": \"Example images showing good lighting, room too dark, and backlit scene where eyes are not visible.\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"If it's practical, <strong>minimize exciting things</strong> that are visible behind or to the side of the screen--for instance, by facing a wall instead of the kitchen. (If this isn't practical for you, don't worry about it--just check the box!)\",\r\n                    \"image\": {\r\n                        \"src\": \"https://s3.amazonaws.com/lookitcontents/website/distractions.png\",\r\n                        \"alt\": \"Example images showing a child and puppy next to the computer, versus a computer just on its own.\"\r\n                    }\r\n                },\r\n                {\r\n                    \"text\": \"During the study, we'll ask that you sit with your child in your lap, like this. <strong>Make sure the webcam is angled up or down enough that your child's eyes are visible in this position</strong>.\",\r\n                    \"image\": {\r\n                        \"src\": \"https://tecl-intervener-lookit.s3.ca-central-1.amazonaws.com/images/baby-in-lap.jpg\",\r\n                        \"alt\": \"Example image showing a child sitting on his mother's lap.\"\r\n                    }\r\n                }\r\n            ],\r\n            \"requireTestVideo\": false,\r\n            \"showRecordMenu\": false,\r\n            \"recordingInstructionText\": \"You should be able to see your camera view above.\"\r\n        },\r\n        \"debrief\": {\r\n            \"kind\": \"exp-lookit-exit-survey\",\r\n            \"debriefing\": {\r\n                \"title\": \"Thank you for participating!\",\r\n                \"blocks\": [\r\n                    {\r\n                        \"text\": \"We are studying whether babies have expectations about how friends and rivals interact with each other. More specifically, we were interested in whether babies expect a person to be sad if they see their rival and their friend having a positive interaction.\"\r\n                    },\r\n                    {\r\n                        \"text\": \"To do this, we will analyse your babies' looking behaviour and eye movements. Because babies like to look at things they find new and surprising, their eye movements can tell us a lot about what they are thinking!\"\r\n                    },\r\n                    {\r\n                        \"text\": \"We are interested in studing how babies think about these questions because it will help us understand how babies learn about concepts like loyalty. If you would like to learn more about the work that we do, here is a link to our <a href='https://www.harvardlds.org/our-labs/thomas-lab/' target='_blank' rel='noopener'>lab's website</a>, and a <a href='https://www.youtube.com/watch?v=-qul57hcu4I' target='_blank' rel='noopener'>ted talk</a> about infant's moral development.\"\r\n                    },\r\n                    {\r\n                        \"text\": \"Your gift card will arrive in 1-2 weeks. To be eligible for this gift-card, you must have submitted a valid consent form, your child must have been visible during the study, and your child must be in the correct age range for this study. Each child can only recieve a single gift-card. If you have any questions or if you do not receive your giftcard, please contact us through lookit or at our lab's email address (thomasbabylab@gmail.com).\"\r\n                    }\r\n                ]\r\n            }\r\n        },\r\n        \"social-network\": {\r\n            \"kind\": \"exp-lookit-survey\",\r\n            \"formSchema\": {\r\n                \"schema\": {\r\n                    \"type\": \"object\",\r\n                    \"title\": \"Thank you for completing the main portion of the study. We just have a few more questions about you and your child before you are done! These questions will be related to the size of you and your child's social network.\",\r\n                    \"properties\": {\r\n                        \"daycare\": {\r\n                            \"title\": \"Approximately how many hours does your child spend in daycare per week? If your child is not in daycare, please type N/A.\",\r\n                            \"required\": false\r\n                        },\r\n                        \"daycare-2\": {\r\n                            \"title\": \"If your child attends daycare, approximately how many other children are present in their class or group?\",\r\n                            \"required\": false\r\n                        },\r\n                        \"adults\": {\r\n                            \"title\": \"How many adults does your child regularly interact with in a week (i.e. how many adults does your child see at least once per week). Please include caregivers, nannies, teachers, etc.\",\r\n                            \"required\": false\r\n                        },\r\n                        \"peers\": {\r\n                            \"title\": \"How many similar aged peers does your child regularly interact with (i.e. how many other toddlers and young children does your child see at least once per week). Please include kids in daycare, neighbours, family friends etc.\",\r\n                            \"required\": false\r\n                        },\r\n                        \"friends\": {\r\n                            \"title\": \"How many friends does your child have? We define friends other children with whom your child has a close relationship.\",\r\n                            \"required\": false\r\n                        },\r\n                        \"siblings\": {\r\n                            \"title\": \"How many siblings does your child have?\",\r\n                            \"required\": false\r\n                        }\r\n                    }\r\n                },\r\n                \"options\": {\r\n                    \"fields\": {\r\n                        \"daycare\": {},\r\n                        \"daycare-2\": {\r\n                            \"order\": 2\r\n                        },\r\n                        \"adults\": {\r\n                            \"order\": 3\r\n                        },\r\n                        \"peers\": {\r\n                            \"order\": 4\r\n                        },\r\n                        \"friends\": {\r\n                            \"order\": 5\r\n                        },\r\n                        \"siblings\": {\r\n                            \"order\": 6\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        \"survey\": {\r\n            \"kind\": \"exp-lookit-survey\",\r\n            \"formSchema\": {\r\n                \"schema\": {\r\n                    \"type\": \"object\",\r\n                    \"title\": \"Thank you for completing the main portion of the study. We just have a few more questions about you and your child before you are done! These questions will be related to the size of you and your child's social network.\",\r\n                    \"properties\": {\r\n                        \"daycare\": {\r\n                            \"enum\": [\r\n                                \"0 hours per week\",\r\n                                \"1-10 hours per week\",\r\n                                \"11-20 hours per week\",\r\n                                \"21-30 hours per week\",\r\n                                \"More than 30 hours per week\"\r\n                            ],\r\n                            \"title\": \"Approximately how much time does your child spend in daycare every week?\",\r\n                            \"default\": \" \"\r\n                        },\r\n                        \"daycare-2\": {\r\n                            \"title\": \"If your child attends daycare, approximately how many other children are present in their class or group?\",\r\n                            \"enum\": [\r\n                                \"My child does not go to daycare\",\r\n                                \"0-3 other children\",\r\n                                \"4-6 other children\",\r\n                                \"7-9 other children\",\r\n                                \"9+ other children\"\r\n                            ],\r\n                            \"default\": \" \"\r\n                        },\r\n                        \"parents\": {\r\n                            \"title\": \"How many different caregivers are usually present (e.g. parents, grandparents, nannies, etc.) in your child's home/homes?\",\r\n                            \"enum\": [\r\n                                \"1 caregiver\",\r\n                                \"2 caregivers\",\r\n                                \"3 caregivers\",\r\n                                \"4 caregivers\",\r\n                                \"5 or more caregivers\"\r\n                            ],\r\n                            \"default\": \" \"\r\n                        },\r\n                        \"siblings\": {\r\n                            \"title\": \"How many siblings does your child have?\",\r\n                            \"enum\": [\r\n                                \"My child does not have any siblings\",\r\n                                \"1 sibling\",\r\n                                \"2 siblings\",\r\n                                \"3 siblings\",\r\n                                \"4 siblings\",\r\n                                \"5 or more siblings\"\r\n                            ],\r\n                            \"default\": \" \"\r\n                        },\r\n                        \"soc-net-1\": {\r\n                            \"enum\": [\r\n                                \"0-4 people\",\r\n                                \"5-9 people\",\r\n                                \"10-14 people\",\r\n                                \"15-20 people\",\r\n                                \"More than 20 people\"\r\n                            ],\r\n                            \"title\": \"Approximately how many people have you had face-to-face social contact with (i.e. not including doctors, lawyers, hairdressers, employers, etc.) in the past 7 days?\",\r\n                            \"required\": false,\r\n                            \"default\": \" \"\r\n                        },\r\n                        \"soc-net-2\": {\r\n                            \"title\": \"In the space below, please list the initials of everyone with whom you had some kind of face-to-face social contact during the last 7 days. Separate each initial with a space e.g. JD, BA.\",\r\n                            \"required\": false\r\n                        }\r\n                    }\r\n                },\r\n                \"options\": {\r\n                    \"fields\": {\r\n                        \"daycare\": {\r\n                            \"sort\": false,\r\n                            \"noneLabel\": \"-- Select --\",\r\n                            \"removeDefaultNone\": false,\r\n                            \"order\": 1\r\n                        },\r\n                        \"daycare-2\": {\r\n                            \"sort\": false,\r\n                            \"noneLabel\": \"-- Select --\",\r\n                            \"removeDefaultNone\": false,\r\n                            \"order\": 2\r\n                        },\r\n                        \"parents\": {\r\n                            \"sort\": false,\r\n                            \"noneLabel\": \"-- Select --\",\r\n                            \"removeDefaultNone\": false,\r\n                            \"order\": 3\r\n                        },\r\n                        \"siblings\": {\r\n                            \"sort\": false,\r\n                            \"noneLabel\": \"-- Select --\",\r\n                            \"removeDefaultNone\": false,\r\n                            \"order\": 4\r\n                        },\r\n                        \"soc-net-1\": {\r\n                            \"sort\": false,\r\n                            \"noneLabel\": \"-- Select --\",\r\n                            \"removeDefaultNone\": false,\r\n                            \"order\": 5\r\n                        },\r\n                        \"soc-net-2\": {\r\n                            \"order\": 6\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        \"test-trials\": {\r\n            \"kind\": \"choice\",\r\n            \"sampler\": \"random-parameter-set\",\r\n            \"frameList\": [\r\n                {\r\n                    \"kind\": \"exp-lookit-video-infant-control\",\r\n                    \"endTrialKey\": \" \",\r\n                    \"pauseKey\": \"p\",\r\n                    \"restartAfterPause\": true,\r\n                    \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n                    \"video\": {\r\n                        \"loop\": false,\r\n                        \"position\": \"fill\",\r\n                        \"source\": \"TEST01\"\r\n                    },\r\n                    \"doRecording\": true,\r\n                    \"autoProceed\": true,\r\n                    \"showWaitForRecordingMessage\": false,\r\n                    \"showWaitForUploadMessage\": false,\r\n                    \"data\": {\r\n                        \"trial_index\": 1,\r\n                        \"trial_role\": \"swarm_test\",\r\n                        \"goal_structure\": \"GOAL_STRUCTURE\",\r\n                        \"reveal_number\": \"REVEAL_NUMBER\",\r\n                        \"reveal_outcome\": \"OUTCOME01\",\r\n                        \"measurement_starts_approximately_s\": 54,\r\n                        \"maximum_reveal_measurement_s\": 50\r\n                    }\r\n                },\r\n                {\r\n                    \"kind\": \"exp-lookit-video-infant-control\",\r\n                    \"endTrialKey\": \" \",\r\n                    \"pauseKey\": \"p\",\r\n                    \"restartAfterPause\": true,\r\n                    \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n                    \"video\": {\r\n                        \"loop\": false,\r\n                        \"position\": \"fill\",\r\n                        \"source\": \"TEST02\"\r\n                    },\r\n                    \"doRecording\": true,\r\n                    \"autoProceed\": true,\r\n                    \"showWaitForRecordingMessage\": false,\r\n                    \"showWaitForUploadMessage\": false,\r\n                    \"data\": {\r\n                        \"trial_index\": 2,\r\n                        \"trial_role\": \"swarm_test\",\r\n                        \"goal_structure\": \"GOAL_STRUCTURE\",\r\n                        \"reveal_number\": \"REVEAL_NUMBER\",\r\n                        \"reveal_outcome\": \"OUTCOME02\",\r\n                        \"measurement_starts_approximately_s\": 54,\r\n                        \"maximum_reveal_measurement_s\": 50\r\n                    }\r\n                },\r\n                {\r\n                    \"kind\": \"exp-lookit-video-infant-control\",\r\n                    \"endTrialKey\": \" \",\r\n                    \"pauseKey\": \"p\",\r\n                    \"restartAfterPause\": true,\r\n                    \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n                    \"video\": {\r\n                        \"loop\": false,\r\n                        \"position\": \"fill\",\r\n                        \"source\": \"TEST03\"\r\n                    },\r\n                    \"doRecording\": true,\r\n                    \"autoProceed\": true,\r\n                    \"showWaitForRecordingMessage\": false,\r\n                    \"showWaitForUploadMessage\": false,\r\n                    \"data\": {\r\n                        \"trial_index\": 3,\r\n                        \"trial_role\": \"swarm_test\",\r\n                        \"goal_structure\": \"GOAL_STRUCTURE\",\r\n                        \"reveal_number\": \"REVEAL_NUMBER\",\r\n                        \"reveal_outcome\": \"OUTCOME03\",\r\n                        \"measurement_starts_approximately_s\": 54,\r\n                        \"maximum_reveal_measurement_s\": 50\r\n                    }\r\n                },\r\n                {\r\n                    \"kind\": \"exp-lookit-video-infant-control\",\r\n                    \"endTrialKey\": \" \",\r\n                    \"pauseKey\": \"p\",\r\n                    \"restartAfterPause\": true,\r\n                    \"pausedText\": \"Study paused \\n\\n Press 'p' to resume\",\r\n                    \"video\": {\r\n                        \"loop\": false,\r\n                        \"position\": \"fill\",\r\n                        \"source\": \"TEST04\"\r\n                    },\r\n                    \"doRecording\": true,\r\n                    \"autoProceed\": true,\r\n                    \"showWaitForRecordingMessage\": false,\r\n                    \"showWaitForUploadMessage\": false,\r\n                    \"data\": {\r\n                        \"trial_index\": 4,\r\n                        \"trial_role\": \"swarm_test\",\r\n                        \"goal_structure\": \"GOAL_STRUCTURE\",\r\n                        \"reveal_number\": \"REVEAL_NUMBER\",\r\n                        \"reveal_outcome\": \"OUTCOME04\",\r\n                        \"measurement_starts_approximately_s\": 54,\r\n                        \"maximum_reveal_measurement_s\": 50\r\n                    }\r\n                }\r\n            ],\r\n            \"parameterSets\": [\r\n                {\r\n                    \"CONDITION\": \"different_goals_half_number_one_group-two_groups-one_group-two_groups\",\r\n                    \"GOAL_STRUCTURE\": \"different_goals\",\r\n                    \"REVEAL_NUMBER\": \"half_number\",\r\n                    \"OUTCOME01\": \"one_group\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"two_groups\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"one_group\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"two_groups\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"different_goals_half_number_two_groups-one_group-two_groups-one_group\",\r\n                    \"GOAL_STRUCTURE\": \"different_goals\",\r\n                    \"REVEAL_NUMBER\": \"half_number\",\r\n                    \"OUTCOME01\": \"two_groups\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"one_group\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"two_groups\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"one_group\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"different_goals_full_number_one_group-two_groups-one_group-two_groups\",\r\n                    \"GOAL_STRUCTURE\": \"different_goals\",\r\n                    \"REVEAL_NUMBER\": \"full_number\",\r\n                    \"OUTCOME01\": \"one_group\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"two_groups\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"one_group\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"two_groups\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"different_goals_full_number_two_groups-one_group-two_groups-one_group\",\r\n                    \"GOAL_STRUCTURE\": \"different_goals\",\r\n                    \"REVEAL_NUMBER\": \"full_number\",\r\n                    \"OUTCOME01\": \"two_groups\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"one_group\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"two_groups\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"one_group\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"same_goal_half_number_one_group-two_groups-one_group-two_groups\",\r\n                    \"GOAL_STRUCTURE\": \"same_goal\",\r\n                    \"REVEAL_NUMBER\": \"half_number\",\r\n                    \"OUTCOME01\": \"one_group\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"two_groups\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"one_group\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"two_groups\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"same_goal_half_number_two_groups-one_group-two_groups-one_group\",\r\n                    \"GOAL_STRUCTURE\": \"same_goal\",\r\n                    \"REVEAL_NUMBER\": \"half_number\",\r\n                    \"OUTCOME01\": \"two_groups\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"one_group\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"two_groups\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip05_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"one_group\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip06_group-test_reveal-one-group_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"same_goal_full_number_one_group-two_groups-one_group-two_groups\",\r\n                    \"GOAL_STRUCTURE\": \"same_goal\",\r\n                    \"REVEAL_NUMBER\": \"full_number\",\r\n                    \"OUTCOME01\": \"one_group\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"two_groups\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"one_group\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"two_groups\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal\"\r\n                },\r\n                {\r\n                    \"CONDITION\": \"same_goal_full_number_two_groups-one_group-two_groups-one_group\",\r\n                    \"GOAL_STRUCTURE\": \"same_goal\",\r\n                    \"REVEAL_NUMBER\": \"full_number\",\r\n                    \"OUTCOME01\": \"two_groups\",\r\n                    \"TEST01\": \"swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME02\": \"one_group\",\r\n                    \"TEST02\": \"swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal\",\r\n                    \"OUTCOME03\": \"two_groups\",\r\n                    \"TEST03\": \"swarm-v18-50s-reveal/clip08_group-test_reveal-two-groups_audio-v18-50s-reveal\",\r\n                    \"OUTCOME04\": \"one_group\",\r\n                    \"TEST04\": \"swarm-v18-50s-reveal/clip07_group-test_reveal-one-group_audio-v18-50s-reveal\"\r\n                }\r\n            ],\r\n            \"parameterSetWeights\": [\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1\r\n            ],\r\n            \"commonFrameProperties\": {\r\n                \"kind\": \"exp-lookit-video-infant-control\",\r\n                \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n                \"audioTypes\": [\r\n                    \"mp3\"\r\n                ],\r\n                \"videoTypes\": [\r\n                    \"mp4\"\r\n                ],\r\n                \"backgroundColor\": \"black\",\r\n                \"autoProceed\": true\r\n            }\r\n        },\r\n        \"study-end\": {\r\n            \"blocks\": [\r\n                {\r\n                    \"emph\": false,\r\n                    \"title\": \"We're all done with the video portion of the study! Great job!\"\r\n                },\r\n                {\r\n                    \"text\": \" Next, we'll ask you a few questions about your child's social network and ask you to fill out a short exit survey, where you'll be asked about to confirm some information and select your level of privacy. Your baby does not need to be with you now. Once you submit that survey, there'll be a little debrief where we give more background information about the study and provide some links where you can find out more on your own.\"\r\n                }\r\n            ],\r\n            \"showPreviousButton\": false,\r\n            \"kind\": \"exp-lookit-text\"\r\n        },\r\n        \"swarm-familiarization-1\": {\r\n            \"kind\": \"exp-lookit-video\",\r\n            \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n            \"video\": {\r\n                \"loop\": false,\r\n                \"position\": \"fill\",\r\n                \"source\": \"swarm-intro-familiarization/familiarization01_one-object\"\r\n            },\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ],\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"backgroundColor\": \"black\",\r\n            \"autoProceed\": true,\r\n            \"doRecording\": true,\r\n            \"requireVideoCount\": 1,\r\n            \"requireAudioCount\": 0,\r\n            \"showWaitForRecordingMessage\": false,\r\n            \"showWaitForUploadMessage\": false,\r\n            \"data\": {\r\n                \"trial_index\": 1,\r\n                \"trial_role\": \"intro_familiarization\",\r\n                \"reveal_outcome\": \"one_object\"\r\n            }\r\n        },\r\n        \"swarm-familiarization-2\": {\r\n            \"kind\": \"exp-lookit-video\",\r\n            \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n            \"video\": {\r\n                \"loop\": false,\r\n                \"position\": \"fill\",\r\n                \"source\": \"swarm-intro-familiarization/familiarization02_two-objects\"\r\n            },\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ],\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"backgroundColor\": \"black\",\r\n            \"autoProceed\": true,\r\n            \"doRecording\": true,\r\n            \"requireVideoCount\": 1,\r\n            \"requireAudioCount\": 0,\r\n            \"showWaitForRecordingMessage\": false,\r\n            \"showWaitForUploadMessage\": false,\r\n            \"data\": {\r\n                \"trial_index\": 2,\r\n                \"trial_role\": \"intro_familiarization\",\r\n                \"reveal_outcome\": \"two_objects\"\r\n            }\r\n        },\r\n        \"swarm-familiarization-3\": {\r\n            \"kind\": \"exp-lookit-video\",\r\n            \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n            \"video\": {\r\n                \"loop\": false,\r\n                \"position\": \"fill\",\r\n                \"source\": \"swarm-intro-familiarization/familiarization03_two-objects\"\r\n            },\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ],\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"backgroundColor\": \"black\",\r\n            \"autoProceed\": true,\r\n            \"doRecording\": true,\r\n            \"requireVideoCount\": 1,\r\n            \"requireAudioCount\": 0,\r\n            \"showWaitForRecordingMessage\": false,\r\n            \"showWaitForUploadMessage\": false,\r\n            \"data\": {\r\n                \"trial_index\": 3,\r\n                \"trial_role\": \"intro_familiarization\",\r\n                \"reveal_outcome\": \"two_objects\"\r\n            }\r\n        },\r\n        \"swarm-familiarization-4\": {\r\n            \"kind\": \"exp-lookit-video\",\r\n            \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n            \"video\": {\r\n                \"loop\": false,\r\n                \"position\": \"fill\",\r\n                \"source\": \"swarm-intro-familiarization/familiarization04_one-object\"\r\n            },\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ],\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"backgroundColor\": \"black\",\r\n            \"autoProceed\": true,\r\n            \"doRecording\": true,\r\n            \"requireVideoCount\": 1,\r\n            \"requireAudioCount\": 0,\r\n            \"showWaitForRecordingMessage\": false,\r\n            \"showWaitForUploadMessage\": false,\r\n            \"data\": {\r\n                \"trial_index\": 4,\r\n                \"trial_role\": \"intro_familiarization\",\r\n                \"reveal_outcome\": \"one_object\"\r\n            }\r\n        },\r\n        \"swarm-attention-before-test\": {\r\n            \"kind\": \"exp-lookit-video\",\r\n            \"baseDir\": \"https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/\",\r\n            \"video\": {\r\n                \"loop\": false,\r\n                \"position\": \"fill\",\r\n                \"source\": \"Fam\"\r\n            },\r\n            \"videoTypes\": [\r\n                \"mp4\"\r\n            ],\r\n            \"audioTypes\": [\r\n                \"mp3\"\r\n            ],\r\n            \"backgroundColor\": \"black\",\r\n            \"autoProceed\": true,\r\n            \"doRecording\": true,\r\n            \"requireVideoCount\": 1,\r\n            \"requireAudioCount\": 0,\r\n            \"showWaitForRecordingMessage\": false,\r\n            \"showWaitForUploadMessage\": false,\r\n            \"data\": {\r\n                \"trial_role\": \"attention_before_test\",\r\n                \"attention_video\": \"Fam\"\r\n            }\r\n        }\r\n    },\r\n    \"sequence\": [\r\n        \"video-config\",\r\n        \"study-intro\",\r\n        \"video-consent\",\r\n        \"instructions-1\",\r\n        \"instructions-2\",\r\n        \"instructions-3\",\r\n        \"instructions-4\",\r\n        \"instructions-5\",\r\n        \"instructions-6\",\r\n        \"instructions-7\",\r\n        \"webcam-display-check\",\r\n        \"swarm-familiarization-1\",\r\n        \"swarm-familiarization-2\",\r\n        \"swarm-familiarization-3\",\r\n        \"swarm-familiarization-4\",\r\n        \"swarm-attention-before-test\",\r\n        \"test-trials\",\r\n        \"study-end\",\r\n        \"social-network\",\r\n        \"debrief\"\r\n    ]\r\n}"
+}

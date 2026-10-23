@@ -15,7 +15,8 @@
     "total_duration_s": 55,
     "fps": 30,
     "frame_count": 1650,
-    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+    "audio": "Identical audio across all four baselines; copied from baseline_two-groups_half-number_50s-reveal.mp4.",
+    "audio_reference_source": "clip01 v18, source seconds 53\u2013104 shifted to output second 2; final 2 seconds silent."
   },
   {
     "file": "baseline_two-groups_half-number_50s-reveal.mp4",
@@ -33,7 +34,8 @@
     "total_duration_s": 55,
     "fps": 30,
     "frame_count": 1650,
-    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+    "audio": "Identical audio across all four baselines; copied from baseline_two-groups_half-number_50s-reveal.mp4.",
+    "audio_reference_source": "clip01 v18, source seconds 53\u2013104 shifted to output second 2; final 2 seconds silent."
   },
   {
     "file": "baseline_one-group_full-number_50s-reveal.mp4",
@@ -51,7 +53,8 @@
     "total_duration_s": 55,
     "fps": 30,
     "frame_count": 1650,
-    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+    "audio": "Identical audio across all four baselines; copied from baseline_two-groups_half-number_50s-reveal.mp4.",
+    "audio_reference_source": "clip01 v18, source seconds 53\u2013104 shifted to output second 2; final 2 seconds silent."
   },
   {
     "file": "baseline_two-groups_full-number_50s-reveal.mp4",
@@ -69,6 +72,7 @@
     "total_duration_s": 55,
     "fps": 30,
     "frame_count": 1650,
-    "audio": "Source 53\u2013104 seconds shifted to 2 seconds; last 2 seconds padded with silence."
+    "audio": "Identical audio across all four baselines; copied from baseline_two-groups_half-number_50s-reveal.mp4.",
+    "audio_reference_source": "clip01 v18, source seconds 53\u2013104 shifted to output second 2; final 2 seconds silent."
   }
 ]

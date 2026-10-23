@@ -1,0 +1,22 @@
+[
+  {
+    "file": "baseline_one-group_full-number_50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+  },
+  {
+    "file": "baseline_one-group_half-number_50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+  },
+  {
+    "file": "baseline_two-groups_full-number_50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+  },
+  {
+    "file": "baseline_two-groups_half-number_50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+  }
+]

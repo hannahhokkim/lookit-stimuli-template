@@ -2,9 +2,9 @@
 
 Use `SWARM_BASELINE_VS_DIFFERENT_GOALS.json` in the Lookit study editor. The two existing copy/paste JSON files contain the same revised protocol. The previous versions are saved in `archive-before-baseline-redesign`. The downloaded pilot protocol and participant data remain unchanged.
 
-Each baby is randomly assigned to baseline or different goals. Baseline babies see the reveal without the action demonstration. Different-goals babies see the existing different-goals videos. Same-goal assignments are removed. Each baby sees two test trials: one one-group reveal and one two-group reveal, in counterbalanced order. Half-number and full-number assignments remain between subjects. All eight combinations have equal randomization weights; random assignment does not guarantee equal realized sample sizes.
+Each baby is randomly assigned to baseline or different goals. Baseline babies see the reveal without the action demonstration. Different-goals babies see the existing different-goals videos. Same-goal assignments are removed. Each baby sees four test trials, alternating one-group and two-group reveals: 1–2–1–2 or 2–1–2–1, with equal assignment weights. Each outcome appears twice. Half-number and full-number assignments remain between subjects. All eight combinations have equal randomization weights; random assignment does not guarantee equal realized sample sizes.
 
-Everyone first sees the existing four short introductory object videos. Their order is independently randomized between 1–2–2–1 and 2–1–1–2. They are not the baseline test condition. The existing attention video appears before testing and between the two tests.
+Everyone first sees the existing four short introductory object videos. Their order is independently randomized between 1–2–2–1 and 2–1–1–2. They are not the baseline test condition. The existing attention video appears before testing and between successive tests.
 
 Baseline test files use the new `mp4/swarm-baseline-videos/` paths. Existing introductory filenames are not repurposed. Different-goals stimuli retain their original v18 URLs, including the number manipulations. The one-group displays remain the yellow groups used in the current materials.
 
@@ -14,7 +14,7 @@ Both test conditions use the infant-control frame with spacebar ending and P for
 
 The new `totalLookingTime` starts at the delayed parent-control period. Do not apply the pilot analysis's subtraction of 54 seconds to these new values. The frame records elapsed parent-controlled duration, not continuous gaze coding, because no lookaway-hold key is configured. Use event records and the protocol-version field to distinguish these sessions from the pilot. Preserve ceiling observations as censored when appropriate.
 
-The design follows the baseline-versus-preference-demonstration comparison and two-test structure in Brody et al. (2022). It is not an exact replication: SWARM uses groups with a number manipulation, and parents control online stopping rather than a laboratory experimenter. The paper's exposure-only condition is omitted as requested. Offline attention checks and exclusion decisions are not automated in this JSON.
+The design follows the baseline-versus-preference-demonstration comparison in Brody et al. (2022), extended here to four test trials at the user’s request rather than the paper’s two. It is not an exact replication: SWARM uses groups with a number manipulation, and parents control online stopping rather than a laboratory experimenter. The paper's exposure-only condition is omitted as requested. Offline attention checks and exclusion decisions are not automated in this JSON.
 
 Validation expands all eight parameter sets locally and checks both stimulus paths and condition metadata. A full Lookit preview is still necessary to check video loading, webcam permissions, timing, pause/restart behavior, and spacebar gating in the deployed frameplayer. Saving or uploading this JSON does not itself change the live Lookit study.
 

@@ -181,7 +181,7 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
@@ -207,7 +207,7 @@
         {
           "data": {
             "trial_role": "attention_between_tests",
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -242,12 +242,134 @@
             "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
             "maximum_reveal_measurement_s": 50,
             "instructed_lookaway_s": 2,
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video-infant-control",
           "video": {
             "loop": false,
             "source": "TEST02",
+            "position": "fill"
+          },
+          "pauseKey": "p",
+          "pausedText": "Study paused \n\n Press 'p' to resume",
+          "autoProceed": true,
+          "doRecording": true,
+          "endTrialKey": " ",
+          "restartAfterPause": true,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false,
+          "measurementPeriodDelay": "MEASUREMENT_DELAY",
+          "lookawayKey": "",
+          "lookawayTone": "none",
+          "requireVideoCount": 1,
+          "requireAudioCount": 0,
+          "requiredDuration": 0
+        },
+        {
+          "data": {
+            "trial_role": "attention_between_tests",
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "Fam",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_index": 3,
+            "trial_role": "swarm_test",
+            "study_condition": "STUDY_CONDITION",
+            "goal_structure": "GOAL_STRUCTURE",
+            "reveal_number": "REVEAL_NUMBER",
+            "reveal_outcome": "OUTCOME03",
+            "assigned_condition": "CONDITION",
+            "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
+            "maximum_reveal_measurement_s": 50,
+            "instructed_lookaway_s": 2,
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+          },
+          "kind": "exp-lookit-video-infant-control",
+          "video": {
+            "loop": false,
+            "source": "TEST03",
+            "position": "fill"
+          },
+          "pauseKey": "p",
+          "pausedText": "Study paused \n\n Press 'p' to resume",
+          "autoProceed": true,
+          "doRecording": true,
+          "endTrialKey": " ",
+          "restartAfterPause": true,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false,
+          "measurementPeriodDelay": "MEASUREMENT_DELAY",
+          "lookawayKey": "",
+          "lookawayTone": "none",
+          "requireVideoCount": 1,
+          "requireAudioCount": 0,
+          "requiredDuration": 0
+        },
+        {
+          "data": {
+            "trial_role": "attention_between_tests",
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+          },
+          "kind": "exp-lookit-video",
+          "video": {
+            "loop": false,
+            "source": "Fam",
+            "position": "fill"
+          },
+          "baseDir": "https://raw.githubusercontent.com/hannahhokkim/lookit-stimuli-template/master/",
+          "audioTypes": [
+            "mp3"
+          ],
+          "videoTypes": [
+            "mp4"
+          ],
+          "autoProceed": true,
+          "doRecording": true,
+          "backgroundColor": "black",
+          "requireAudioCount": 0,
+          "requireVideoCount": 1,
+          "showWaitForUploadMessage": false,
+          "showWaitForRecordingMessage": false
+        },
+        {
+          "data": {
+            "trial_index": 4,
+            "trial_role": "swarm_test",
+            "study_condition": "STUDY_CONDITION",
+            "goal_structure": "GOAL_STRUCTURE",
+            "reveal_number": "REVEAL_NUMBER",
+            "reveal_outcome": "OUTCOME04",
+            "assigned_condition": "CONDITION",
+            "measurement_starts_approximately_s": "MEASUREMENT_DELAY",
+            "maximum_reveal_measurement_s": 50,
+            "instructed_lookaway_s": 2,
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
+          },
+          "kind": "exp-lookit-video-infant-control",
+          "video": {
+            "loop": false,
+            "source": "TEST04",
             "position": "fill"
           },
           "pauseKey": "p",
@@ -276,7 +398,11 @@
           "OUTCOME01": "one_group",
           "TEST01": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
           "OUTCOME02": "two_groups",
-          "TEST02": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal"
+          "TEST02": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal"
         },
         {
           "CONDITION": "baseline_half_number_two_groups-first",
@@ -287,7 +413,11 @@
           "OUTCOME01": "two_groups",
           "TEST01": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
           "OUTCOME02": "one_group",
-          "TEST02": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal"
+          "TEST02": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-baseline-videos/baseline_two-groups_half-number_50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-baseline-videos/baseline_one-group_half-number_50s-reveal"
         },
         {
           "CONDITION": "baseline_full_number_one_group-first",
@@ -298,7 +428,11 @@
           "OUTCOME01": "one_group",
           "TEST01": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal",
           "OUTCOME02": "two_groups",
-          "TEST02": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal"
+          "TEST02": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal"
         },
         {
           "CONDITION": "baseline_full_number_two_groups-first",
@@ -309,7 +443,11 @@
           "OUTCOME01": "two_groups",
           "TEST01": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal",
           "OUTCOME02": "one_group",
-          "TEST02": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal"
+          "TEST02": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-baseline-videos/baseline_two-groups_full-number_50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-baseline-videos/baseline_one-group_full-number_50s-reveal"
         },
         {
           "CONDITION": "different_goals_half_number_one_group-first",
@@ -320,7 +458,11 @@
           "OUTCOME01": "one_group",
           "TEST01": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal",
           "OUTCOME02": "two_groups",
-          "TEST02": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal"
+          "TEST02": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal"
         },
         {
           "CONDITION": "different_goals_half_number_two_groups-first",
@@ -331,7 +473,11 @@
           "OUTCOME01": "two_groups",
           "TEST01": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal",
           "OUTCOME02": "one_group",
-          "TEST02": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal"
+          "TEST02": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-v18-50s-reveal/clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-v18-50s-reveal/clip02_group-test_reveal-one-group_audio-v18-50s-reveal"
         },
         {
           "CONDITION": "different_goals_full_number_one_group-first",
@@ -342,7 +488,11 @@
           "OUTCOME01": "one_group",
           "TEST01": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal",
           "OUTCOME02": "two_groups",
-          "TEST02": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal"
+          "TEST02": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME03": "one_group",
+          "TEST03": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME04": "two_groups",
+          "TEST04": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal"
         },
         {
           "CONDITION": "different_goals_full_number_two_groups-first",
@@ -353,7 +503,11 @@
           "OUTCOME01": "two_groups",
           "TEST01": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal",
           "OUTCOME02": "one_group",
-          "TEST02": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal"
+          "TEST02": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal",
+          "OUTCOME03": "two_groups",
+          "TEST03": "swarm-v18-50s-reveal/clip04_group-test_reveal-two-groups_audio-v18-50s-reveal",
+          "OUTCOME04": "one_group",
+          "TEST04": "swarm-v18-50s-reveal/clip03_group-test_reveal-one-group_audio-v18-50s-reveal"
         }
       ],
       "parameterSetWeights": [
@@ -515,13 +669,13 @@
       "blocks": [
         {
           "title": "What will happen during the study",
-          "text": "Your child will first watch four short introductory videos. Then there will be two test videos. In some versions, characters move toward objects before a screen lifts. In other versions, the screen lifts without those actions."
+          "text": "Your child will first watch four short introductory videos. Then there will be four test videos. In some versions, characters move toward objects before a screen lifts. In other versions, the screen lifts without those actions."
         },
         {
           "text": "Please let your child watch naturally. Avoid directing their attention or describing the videos."
         },
         {
-          "text": "During the two test videos, wait until the screen has lifted and the characters are revealed. Then press the spacebar when your child has looked away continuously for about two seconds. Brief looks away do not end the trial."
+          "text": "During the four test videos, wait until the screen has lifted and the characters are revealed. Then press the spacebar when your child has looked away continuously for about two seconds. Brief looks away do not end the trial."
         },
         {
           "text": "The introductory videos end automatically. You can pause by pressing P."
@@ -831,7 +985,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 1,
             "reveal_outcome": "INTRO_OUTCOME1",
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -859,7 +1013,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 2,
             "reveal_outcome": "INTRO_OUTCOME2",
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -887,7 +1041,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 3,
             "reveal_outcome": "INTRO_OUTCOME3",
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {
@@ -915,7 +1069,7 @@
             "trial_role": "intro_familiarization",
             "trial_index": 4,
             "reveal_outcome": "INTRO_OUTCOME4",
-            "protocol_version": "swarm-baseline-vs-different-goals-v1"
+            "protocol_version": "swarm-baseline-vs-different-goals-v2-four-tests"
           },
           "kind": "exp-lookit-video",
           "video": {

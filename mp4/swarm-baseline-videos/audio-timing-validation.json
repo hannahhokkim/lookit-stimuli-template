@@ -1,0 +1,26 @@
+[
+  {
+    "file": "baseline_one-group_full-number_50s-reveal.mp4",
+    "aligned_correlation": 0.9999573372618058,
+    "source_start_s": 53,
+    "baseline_start_s": 2
+  },
+  {
+    "file": "baseline_one-group_half-number_50s-reveal.mp4",
+    "aligned_correlation": 0.9999573372618058,
+    "source_start_s": 53,
+    "baseline_start_s": 2
+  },
+  {
+    "file": "baseline_two-groups_full-number_50s-reveal.mp4",
+    "aligned_correlation": 0.9999573372618058,
+    "source_start_s": 53,
+    "baseline_start_s": 2
+  },
+  {
+    "file": "baseline_two-groups_half-number_50s-reveal.mp4",
+    "aligned_correlation": 0.9999573372618058,
+    "source_start_s": 53,
+    "baseline_start_s": 2
+  }
+]

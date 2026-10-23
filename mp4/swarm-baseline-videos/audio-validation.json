@@ -2,21 +2,21 @@
   {
     "file": "baseline_one-group_full-number_50s-reveal.mp4",
     "video_unchanged": true,
-    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+    "decoded_audio_sha256": "SHA256=ae462a245e7f400c16c47d68d69d665f0b97238407fabc7a73436143e7fcba32"
   },
   {
     "file": "baseline_one-group_half-number_50s-reveal.mp4",
     "video_unchanged": true,
-    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+    "decoded_audio_sha256": "SHA256=ae462a245e7f400c16c47d68d69d665f0b97238407fabc7a73436143e7fcba32"
   },
   {
     "file": "baseline_two-groups_full-number_50s-reveal.mp4",
     "video_unchanged": true,
-    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+    "decoded_audio_sha256": "SHA256=ae462a245e7f400c16c47d68d69d665f0b97238407fabc7a73436143e7fcba32"
   },
   {
     "file": "baseline_two-groups_half-number_50s-reveal.mp4",
     "video_unchanged": true,
-    "decoded_audio_sha256": "SHA256=516c0d7805ac29fe9db77fc32602a9f0e754bef9821ad4c0d6612d0f648ed710"
+    "decoded_audio_sha256": "SHA256=ae462a245e7f400c16c47d68d69d665f0b97238407fabc7a73436143e7fcba32"
   }
 ]

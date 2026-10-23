@@ -1,0 +1,22 @@
+[
+  {
+    "file": "clip01_reference_16x16_diff-goals_reveal-two-groups_audio-v18-50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=b68fd971458d49dc0556dfc882e493887cd32895bb50314c5c6a0cd29973bb86"
+  },
+  {
+    "file": "clip02_group-test_reveal-one-group_audio-v18-50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=b68fd971458d49dc0556dfc882e493887cd32895bb50314c5c6a0cd29973bb86"
+  },
+  {
+    "file": "clip03_group-test_reveal-one-group_audio-v18-50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=b68fd971458d49dc0556dfc882e493887cd32895bb50314c5c6a0cd29973bb86"
+  },
+  {
+    "file": "clip04_group-test_reveal-two-groups_audio-v18-50s-reveal.mp4",
+    "video_unchanged": true,
+    "decoded_audio_sha256": "SHA256=b68fd971458d49dc0556dfc882e493887cd32895bb50314c5c6a0cd29973bb86"
+  }
+]

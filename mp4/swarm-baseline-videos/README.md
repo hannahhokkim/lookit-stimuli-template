@@ -8,4 +8,4 @@ Each video is 55 seconds: a 2-second covered scene, the original 3-second attent
 
 Audio comes from the corresponding original reveal segment and final background music. The source music ends at output time 53 seconds; the final 2 seconds are silent. No action demonstration audio is added.
 
-This implements the no-action baseline logic of Brody et al. using SWARM group stimuli, rather than reproducing the paper's individual-agent stimuli. These files have not been added to the live Lookit protocol or uploaded. The manifest records the source and timing for each clip. The checksheets show frames across each exported video.
+This implements the no-action baseline logic of Brody et al. using SWARM group stimuli, rather than reproducing the paper's individual-agent stimuli. Publishing these files does not install the revised protocol in the live Lookit study. The manifest records the source and timing for each clip. The checksheets show frames across each exported video.
